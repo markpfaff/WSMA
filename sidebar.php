@@ -34,6 +34,7 @@
         <?php wp_meta(); ?>
         </ul>
     </div><!-- /meta -->
+<small>sidebar.php</small>
 
 <?php /* end default code*/?>
 

@@ -18,5 +18,6 @@
 
 </div>
 <!-- end main -->
+<small>page.php</small>
 
 <?php get_footer(); ?>

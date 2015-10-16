@@ -23,6 +23,6 @@
 
 </div>
 <!-- /main-single -->
-
+<small>single.php</small>
 
 <?php get_footer(); ?>

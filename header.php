@@ -11,9 +11,7 @@
 
         <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>
 
-        <style type="text/css" media="screen">
-        @import url( <?php bloginfo('stylesheet_url'); ?> );
-        </style>
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
 
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.ico" />
