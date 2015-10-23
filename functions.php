@@ -53,10 +53,10 @@ function my_register_sidebars() {
 	/* repeat register_sidebar() code for additional sidebars. */
 }
 
-// create Page Excerpts
+// create page excerpts
 add_post_type_support( 'page', 'excerpt' );
 
-// get Child Pages
+// get child pages
 function get_child_pages() {
 
 	global $post;
@@ -82,5 +82,28 @@ function get_child_pages() {
 	wp_reset_query();
 
 }
-//
+
+function wsma_scripts() {
+	wp_enqueue_style( 'wsma', get_stylesheet_uri() );
+ 
+    //example add custom style
+    //wp_enqueue_style( 'wsma-customcssexample', get_template_directory_uri() . '/example/example.css');
+    
+    //Enqueue jQuery first
+	wp_enqueue_script('jquery'); 
+    
+    //true will load in footer which is usually what you want, false is header
+    //20120206 is version number    
+    wp_enqueue_script( 'wsma-bootstrap', get_template_directory_uri() . 'js/bootstrap.min.js', array('jquery'), '20151021', true );
+
+
+    //example add font
+    //wp_enqueue_style( 'wsma-fontexample', 'http://fonts.googleapis.com/css?family=Libre+Baskerville');
+
+
+//	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+//		wp_enqueue_script( 'comment-reply' );
+//	}
+}
+add_action( 'wp_enqueue_scripts', 'wsma_scripts' );
 

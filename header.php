@@ -7,11 +7,8 @@
         <![endif]-->
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
         <meta name="viewport" content="width=device-width; initial-scale=1.0">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
         <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>
-
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
 
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.ico" />
