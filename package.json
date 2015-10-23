@@ -1,0 +1,25 @@
+{
+  "name": "wsma",
+  "version": "1.0.0",
+  "description": "Website Redesign for West Side Music Academy",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markpfaff/WSMA.git"
+  },
+  "author": "Mark Pfaff, Anna Atiagina, Andy Davis, Tracey Talevich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markpfaff/WSMA/issues"
+  },
+  "homepage": "https://github.com/markpfaff/WSMA#readme"
+}

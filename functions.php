@@ -10,28 +10,23 @@ add_filter('the_generator', 'remove_version_info');
 add_filter( 'widget_text', 'shortcode_unautop');
 add_filter( 'widget_text', 'do_shortcode');
 
+
 //register custom menus
-if ( function_exists( 'register_nav_menus' ) ) {
-	register_nav_menus(
-		array(
-		  'main-menu' => 'Main Menu',
-		  'social-menu' => 'Social Menu'
-		)
-	);
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'main-menu' => 'Main Menu',
+      'social-menu' => 'Social Menu'
+    )
+  );
 }
+add_action( 'init', 'register_my_menus' );
 
-register_nav_menus();
-
-register_nav_menu("main_menu", "Main Menu");
-
-$mainMenu = array(
-	"theme_location" => "main_menu",
-	"container" => "ul",
-	"container_class" => "",
-	"container_id" => "main_menu",
-	"depth" => 1
-);
-
+//customize container class for menus
+function set_container_class ($args) {
+$args['container_class'] = str_replace(' ','-',$args['theme_location']).'-nav'; return $args;
+}
+add_filter ('wp_nav_menu_args', 'set_container_class');
 
 //register sidebars
 add_action( 'widgets_init', 'my_register_sidebars' );

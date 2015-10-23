@@ -28,37 +28,21 @@
                                 'menu' => 'Social Menu' ,
                                 'container'  => 'ul',
                                 ) ); ?>
+                        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/facebook.png" alt="facebook"/>
 
                     </div><!-- /social -->
 
-                    <div><!-- logo -->
+                    <div id="logo"><!-- logo -->
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" alt="logo" id="logo"/></a>
-                    </div><!-- /logo -->
-
-            </header>
-            <!-- mobile nav -->
-            <div id = "social-m">
-                    <div>
-                        <a href="https://www.facebook.com/West-Side-Music-Academy-180556468641257/timeline/" target="#">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/facebook.png" alt="facebook"/>
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" alt="logo" id="logo"/>
                         </a>
+                    </div><!-- /logo -->
+                    
+                    <nav>
+                        <?php wp_nav_menu(array('menu' => 'Main Menu')); ?>
+                    </nav>
+                    
+            </header>
 
-                </div>
-            </div><!-- /mobile nav -->
-
-            <!-- nav -->
-                <div class="jquery-nav">
-                            <h4 class="jquery-title">
-                                <a href="#">
-                                    <div class="menu-icon">
-                                        <img src="<?php bloginfo('template_url'); ?>/images/icon-menu.png">
-                                    </div>
-                                </a>
-                            </h4>
-                            <?php wp_nav_menu(array('menu' => 'Main Menu')); ?>
-                        </div>
-
-            <!-- /nav -->
 
             <div id="middle">
