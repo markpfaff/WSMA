@@ -21,28 +21,42 @@
         <main>
 
             <header>
+                <div id="logo"><!-- logo -->
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" alt="logo" id="logo"/>
+                    </a>
+                </div><!-- /logo -->
+                <div class="navbar navbar-default navbar-static-top" role="navigation">
+                <div class="container">
 
-                    <div id="social">
-                        <?php wp_nav_menu( array(
-                                'theme_location' => 'social-menu' ,
-                                'menu' => 'Social Menu' ,
-                                'container'  => 'ul',
-                                ) ); ?>
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/facebook.png" alt="facebook"/>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">West Side Music Academy</a>
+                    </div>
 
-                    </div><!-- /social -->
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                             <?php
+                                wp_nav_menu( array(
+                                    'menu'              => 'Main Menu',                
+                                    'depth'             => 2,
+                                    'container'         => 'div',
+                                    'container_class'   => 'collapse navbar-collapse',
+                                    'menu_class'        => 'nav navbar-nav',
+                                    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                                    'walker'            => new wp_bootstrap_navwalker())
+                                );
+                            ?>
+                        </ul>
+                    </div><!--/.nav-collapse -->
 
-                    <div id="logo"><!-- logo -->
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" alt="logo" id="logo"/>
-                        </a>
-                    </div><!-- /logo -->
-                    
-                    <nav>
-                        <?php wp_nav_menu(array('menu' => 'Main Menu')); ?>
-                    </nav>
-                    
+                </div>     
             </header>
 
 
-            <div id="middle">
+            <div class="container">

@@ -15,21 +15,23 @@ add_filter( 'widget_text', 'do_shortcode');
 function register_my_menus() {
   register_nav_menus(
     array(
-      'main-menu' => 'Main Menu',
-      'social-menu' => 'Social Menu'
+      'main-menu' => 'Main Menu' 
     )
   );
 }
 add_action( 'init', 'register_my_menus' );
 
 //customize container class for menus
-function set_container_class ($args) {
-$args['container_class'] = str_replace(' ','-',$args['theme_location']).'-nav'; return $args;
-}
-add_filter ('wp_nav_menu_args', 'set_container_class');
+//function set_container_class ($args) {
+//$args['container_class'] = str_replace(' ','-',$args['theme_location']).'-nav'; return $args;
+//}
+//add_filter ('wp_nav_menu_args', 'set_container_class');
 
 //register sidebars
 add_action( 'widgets_init', 'my_register_sidebars' );
+
+// Register Custom Navigation Walker
+require_once('wp_bootstrap_navwalker.php');
 
 function my_register_sidebars() {
 
@@ -38,6 +40,7 @@ function my_register_sidebars() {
 		array(
 			'id' => 'primary',
 			'name' => __( 'Primary Sidebar' ),
+            'class' => 'sidebar',
 			'before_widget' => '<li id="%1$s" class="widget %2$s">',
 			'after_widget' => '</li>',
 			'before_title' => '<h3 class="widget-title">',
@@ -89,7 +92,9 @@ function wsma_scripts() {
     
     //true will load in footer which is usually what you want, false is header
     //20120206 is version number    
-    wp_enqueue_script( 'wsma-bootstrap', get_template_directory_uri() . 'js/bootstrap.min.js', array('jquery'), '20151021', true );
+    wp_enqueue_script( 'wsma-bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array('jquery'), '20151021', true );
+
+    wp_enqueue_script( 'wsma-bootstrap-hover-dropdown', get_template_directory_uri() . '/js/bootstrap-hover-dropdown.min.js', array('jquery'), '20151021', true );
 
 
     //example add font

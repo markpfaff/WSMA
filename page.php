@@ -5,7 +5,7 @@
 	<!-- sidebar end -->
 
 <!-- content start -->
-<div id="content" class="page">
+<div id="content" class="page col-md-10">
     <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
     <h2><?php the_title(); ?></h2>

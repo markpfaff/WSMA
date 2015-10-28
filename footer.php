@@ -1,4 +1,4 @@
-            </div><!-- /middle -->
+            </div><!-- /class container -->
 
 
 
@@ -11,17 +11,6 @@
             </footer>
 
         </main>
-        <script>
-
-
-            window.onload = function() {
-
-
-                jQuery(".jquery-title").click(function() {
-                    jQuery(".menu-main-menu-container").slideToggle();
-                    return false;
-                });
-
         </script>
         <script src="//localhost:35729/livereload.js"></script>
 

@@ -4,7 +4,7 @@
 <?php get_sidebar( 'primary' ); ?>
 <!-- /sidebar -->
 
-<div id = "main-single">
+<div id = "main-single" class="col-md-8">
   <!-- START CONTENT -->
     <?php if (have_posts()) : while(have_posts()) : the_post();?> 
   <div id="content" class="single">
