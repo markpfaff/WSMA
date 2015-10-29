@@ -39,7 +39,7 @@
                     <?php echo get_the_excerpt(); ?>
 
                     <?php 
-                        query_posts("page_id=6");
+                        query_posts("page_id=5");
                         while ( have_posts() ) : the_post()
                     ?>
                         <h1><a href="<?php echo the_permalink(); ?>"><?php echo get_the_title(); ?></a></h1>
