@@ -1,23 +1,33 @@
 <?php get_header(); ?>
 
-	<!-- sidebar start -->
-	<?php get_sidebar( 'primary' ); ?>
-	<!-- sidebar end -->
+
 
 <!-- content start -->
-<div id="content" class="page col-md-10">
-    <?php if (have_posts()) : ?>
-    <?php while (have_posts()) : the_post(); ?>
-    <h2><?php the_title(); ?></h2>
-    <?php the_content('<p class="serif">More &raquo;</p>'); ?>
-    <?php endwhile; ?>
-    <?php endif; ?>
+<div id="container" class="page">
+    <div class="row">
+        <?php if (have_posts()) : ?>
+        <?php while (have_posts()) : the_post(); ?>
+        <h1 class="col-md-12 page-title"><?php the_title(); ?></h1>
+        <article class="page col-md-10" id="post-<?php the_ID(); ?>">
+            <div class="entry">
+            <?php the_content('<p class="serif">More &raquo;</p>'); ?>
+        	</div>
+        </article>
+        <?php endwhile; else:?>
+        <article class="page col-md-10 not-found">
+            <div class="entry">
+                <p class="lead"><?php _e('Sorry, this page does not exist. Try searching for one.'); ?></p>
+                <?php get_search_form(); ?>
+            </div>
+        </article>
+        <?php endif; ?>
+        
+        	<!-- sidebar -->
+            <?php get_sidebar( 'primary' ); ?>
+            <!-- /sidebar -->
+    </div><!-- /row -->
+</div><!-- /container -->
 
-</div>
-<!-- content end -->
-
-</div>
-<!-- end main -->
 <small>page.php</small>
 
 <?php get_footer(); ?>

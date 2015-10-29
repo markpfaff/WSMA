@@ -50,4 +50,5 @@
 
 <?php endif; ?>
 </div><!-- END CONTENT -->
+<small>index.php</small>
 <?php get_footer(); ?>

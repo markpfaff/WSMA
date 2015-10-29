@@ -81,29 +81,45 @@ function get_child_pages() {
 
 }
 
-function wsma_scripts() {
-	wp_enqueue_style( 'wsma', get_stylesheet_uri() );
- 
-    //example add custom style
-    //wp_enqueue_style( 'wsma-customcssexample', get_template_directory_uri() . '/example/example.css');
+// Only on front-end pages, NOT in admin area
+if (!is_admin()) {
+
+	// Load CSS & JS
+    function wsma_styles() {
+        wp_enqueue_style( 'wsma', get_stylesheet_uri() );
+
+        //example add custom style
+        //wp_enqueue_style( 'wsma-customcssexample', get_template_directory_uri() . '/example/example.css');
+        
+        
+        // Font Awesome
+        wp_enqueue_style('wsma-font-awesome', '//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css', array(), null, 'all');
+
+        //example add font
+        //wp_enqueue_style( 'wsma-fontexample', 'http://fonts.googleapis.com/css?family=Libre+Baskerville');
+    }
     
-    //Enqueue jQuery first
-	wp_enqueue_script('jquery'); 
-    
-    //true will load in footer which is usually what you want, false is header
-    //20120206 is version number    
-    wp_enqueue_script( 'wsma-bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array('jquery'), '20151021', true );
+    function wsma_scripts() {
+        
+        // unload bundled jQuery and load from cdn for faster load time
+		wp_deregister_script('jquery');
+        //load from cdn
+		wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), null, false);
+		//load jQuery before other js that require jQuery
+        wp_enqueue_script('jquery');
 
-    wp_enqueue_script( 'wsma-bootstrap-hover-dropdown', get_template_directory_uri() . '/js/bootstrap-hover-dropdown.min.js', array('jquery'), '20151021', true );
+        //true will load in footer which is usually what you want, false is header
+        //20120206 is version number    
+        wp_enqueue_script( 'wsma-bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array('jquery'), '20151021', true );
+
+        wp_enqueue_script( 'wsma-bootstrap-hover-dropdown', get_template_directory_uri() . '/js/bootstrap-hover-dropdown.min.js', array('jquery'), '20151021', true );
+        
+    }
+
+    add_action( 'wp_enqueue_scripts', 'wsma_styles', 11 );
+    add_action( 'wp_enqueue_scripts', 'wsma_scripts', 12 );
+    }
 
 
-    //example add font
-    //wp_enqueue_style( 'wsma-fontexample', 'http://fonts.googleapis.com/css?family=Libre+Baskerville');
 
-
-//	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-//		wp_enqueue_script( 'comment-reply' );
-//	}
-}
-add_action( 'wp_enqueue_scripts', 'wsma_scripts' );
 
