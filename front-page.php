@@ -15,7 +15,7 @@
                 </div><!--/flexslider-->
                 
                 <div class="container">
-                    <div class="row">
+                    <div class="row clearboth">
                         <div class="col-md-4">
                             <a href="<?php esc_url( get_permalink( get_page_by_title( 'News' ) ) ); ?>">
                             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/news.png" alt="Read latest news"/>

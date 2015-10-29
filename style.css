@@ -6827,7 +6827,7 @@ li {
 .row {
   padding-bottom: 20px;
 }
-.row {
+.clearboth {
   clear: both;
 }
 #logo img {
