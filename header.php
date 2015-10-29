@@ -23,8 +23,10 @@
             <header>
                 <div id="logo"><!-- logo -->
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" alt="logo" id="logo"/>
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.jpg" alt="logo" id="logo"/>
                     </a>
+                    <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">West Side Music Academy</a>
+
                 </div><!-- /logo -->
                 <div class="navbar navbar-default navbar-static-top" role="navigation">
                 <div class="container">
@@ -36,7 +38,6 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">West Side Music Academy</a>
                     </div>
 
                     <div class="navbar-collapse collapse">

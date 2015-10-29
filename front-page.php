@@ -8,37 +8,34 @@
 
                             <a href="<?php echo get_permalink($media_page->ID); ?>">
 
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/banner.png" alt="banner image"/>
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/banner.jpg" alt="banner image"/>
                             </a>
                         </li>
                     </ul>
                 </div><!--/flexslider-->
                 
-                <div id="content" class="home-content page">
-                <div class="cta1">
-                    <?php $news_page = get_post(1); ?>
-                    <a href="<?php echo get_permalink($news_page->ID); ?>">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/news.png" alt="Read latest news"/>
-                    </a>
-                </div>
-                <div class="cta2">
-                    <?php $media_page = get_post(1); ?>
-                    <a href="<?php echo get_permalink($media_page->ID); ?>">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/media.png" alt="Watch latest media"/>        
-                    </a>
-                </div>
-                <div class="cta3">
-                    <?php $testimonials_page = get_post(1); ?>
-                    <a href="<?php echo get_permalink($testimonials_page->ID); ?>">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/testimonials.png" alt="Read what people are saying"/>        
-                    </a>
-                </div>
-                    
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="<?php esc_url( get_permalink( get_page_by_title( 'News' ) ) ); ?>">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/news.png" alt="Read latest news"/>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="<?php esc_url( get_permalink( get_page_by_title( 'Media' ) ) ); ?>">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/media.png" alt="Watch latest media"/>        
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="<?php esc_url( get_permalink( get_page_by_title( 'Testimonials' ) ) ); ?>">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/testimonials.png" alt="Read what people are saying"/>        
+                            </a>
+                        </div>
+                    </div><!--/row-->
+                </div><!--/container-->    
                 <div><!--about-->
-                    <div><!--about img-->
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about.png" alt="About"/>
-                    </div><!--/about img-->
-                    <div><!--about text-->
+
+                    <div class="col-md-8"><!--about text-->
                     <?php echo get_the_excerpt(); ?>
 
                     <?php 
@@ -53,6 +50,9 @@
                         wp_reset_query();
                     ?>  
                     </div><!--/about text-->
+                    <div class="col-md-4"><!--about img-->
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/about.png" alt="About"/>
+                    </div><!--/about img-->
                 </div><!--/about-->   
                 
             </div>

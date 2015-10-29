@@ -6817,3 +6817,33 @@ button.close {
     display: none !important;
   }
 }
+img {
+  max-width: 100%;
+}
+li {
+  list-style-type: none;
+}
+.flexslider,
+.row {
+  padding-bottom: 20px;
+}
+.row {
+  clear: both;
+}
+#logo img {
+  width: 100px;
+  float: left;
+}
+.navbar-brand {
+  padding-top: 40px;
+}
+.navbar-static-top {
+  clear: both;
+}
+footer {
+  clear: both;
+}
+small {
+  float: left;
+  clear: both;
+}
