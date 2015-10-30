@@ -7,7 +7,7 @@
     <div class="row">
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
-        <h1 class="col-md-12 page-title"><?php the_title(); ?></h1>
+        <h1 class="col-md-8"><?php the_title(); ?></h1>
         <article class="page col-md-10" id="post-<?php the_ID(); ?>">
             <div class="entry">
             <?php the_content('<p class="serif">More &raquo;</p>'); ?>
@@ -28,6 +28,6 @@
     </div><!-- /row -->
 </div><!-- /container -->
 
-<small>page.php</small>
+<small class="small-label">page.php</small>
 
 <?php get_footer(); ?>

@@ -35,6 +35,6 @@
 		
 </div>
 <!-- END CONTENT -->
-<small>search.php</small>
+<small class="small-label">search.php</small>
 
 <?php get_footer(); ?>

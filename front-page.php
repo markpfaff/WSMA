@@ -56,7 +56,7 @@
                 </div><!--/about-->   
                 
             </div>
-<small>front-page.php</small>
+<small class="small-label">front-page.php</small>
 
 
 <?php get_footer(); ?>

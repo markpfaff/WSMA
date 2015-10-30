@@ -63,6 +63,6 @@
 	</div><!-- .content-area -->
 
 
-<small>single.php</small>
+<small class="small-label">single.php</small>
 
 <?php get_footer(); ?>
