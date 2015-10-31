@@ -5,30 +5,27 @@
         <!--subnav-->
         <?php
 
-/* if the current pages has a parent, i.e. we are on a subpage */
-if($post->post_parent){
-    $parent_title = get_the_title($post->post_parent);
-    //$children = wp_list_pages("title_li=&include=".$post->post_parent."&echo=0"); // list the parent page
-    $children = wp_list_pages("depth=1&title_li=&child_of=".$post->post_parent."&echo=0"); // append the list of children pages to the same $children variable
-}
+        if($post->post_parent){//if we're on a child page (subpage), get title & pages
+            $parent_title = get_the_title($post->post_parent);
+            $children = wp_list_pages("depth=1&title_li=&child_of=".$post->post_parent."&echo=0");//depth=1 only go one child deep
+        }
 
-/* else if the current page does not have a parent, i.e. this is a top level page */
-else {
-    $parent_title = get_the_title($post->ID);
-    //$children = wp_list_pages("title_li=&include=".$post->ID."&echo=0");
-    $children = wp_list_pages("depth=1&title_li=&child_of=".$post->ID."&echo=0"); // form a list of the children of the current page
-}
+        
+        else {// else we're on a parent page (top level), get title
+            $parent_title = get_the_title($post->ID);
+            $children = wp_list_pages("depth=1&title_li=&child_of=".$post->ID."&echo=0");//depth=1 only go one child deep
+        }
 
-/* if we ended up with any pages from the queries above */
-if ($parent_title) { ?>
-    <h2><?php echo $parent_title; ?></h2>
-<?php } 
+        
+        if ($parent_title) {//if title was returned echo it ?>
+            <h2><?php echo $parent_title; ?></h2>
+        <?php } 
 
-if ($children) { ?>
-    <ul class="submenu">
-        <?php echo $children; /*print list of pages*/ ?>
-    </ul>
-<?php } ?>
+        if ($children) {//if child pages were returned echo them ?>
+            <ul class="submenu">
+                <?php echo $children; ?>
+            </ul>
+        <?php } ?>
     
         <!-- /subnav-->
         
