@@ -27,6 +27,7 @@
 <!-- START CONTENT -->
 <div id="content" class="index">
 
+
 <?php if (have_posts()) : ?>
 
     <?php while (have_posts()) : the_post(); ?>
@@ -46,7 +47,7 @@
                 </div>
                 <?php endwhile; ?>
             </div><!-- /col-md-8 -->
-            <!-- sidebar -->
+                    <!-- sidebar -->
             <?php get_sidebar( 'news' ); ?>
             <!-- /sidebar -->
                 <nav class="post-nav">
@@ -57,6 +58,7 @@
 
         </div><!-- /row -->
     </div><!-- /container -->
+
 <?php endif; ?>
 </div><!-- /content -->
 <small class="small-label">index.php</small>

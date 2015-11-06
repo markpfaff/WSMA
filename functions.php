@@ -63,8 +63,11 @@ function my_register_sidebars() {
 	/* repeat register_sidebar() code for additional sidebars. */
 }
 
-// create page excerpts
+//add support for page excerpts
 add_post_type_support( 'page', 'excerpt' );
+
+//add support for post thumbnails
+add_theme_support( 'post-thumbnails' );
 
 // get child pages
 function get_child_pages() {
@@ -109,6 +112,12 @@ if (!is_admin()) {
 
         //example add font
         //wp_enqueue_style( 'wsma-fontexample', 'http://fonts.googleapis.com/css?family=Libre+Baskerville');
+        
+        // Flexslider style
+        wp_enqueue_style('wsma-flexslider-style', get_template_directory_uri() . '/css/flexslider.css', array(), null, 'all');
+
+        
+
     }
     
     function wsma_scripts() {
@@ -125,13 +134,28 @@ if (!is_admin()) {
         wp_enqueue_script( 'wsma-bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array('jquery'), '20151021', true );
 
         wp_enqueue_script( 'wsma-bootstrap-hover-dropdown', get_template_directory_uri() . '/js/bootstrap-hover-dropdown.min.js', array('jquery'), '20151021', true );
-        
+     
+        //Flexslider scripts
+        wp_enqueue_script( 'wsma-flexslider-script', get_template_directory_uri() . '/js/jquery.flexslider.js', array('jquery'), '20151021', true );
+
     }
 
     add_action( 'wp_enqueue_scripts', 'wsma_styles', 11 );
     add_action( 'wp_enqueue_scripts', 'wsma_scripts', 12 );
     }
 
+    
+
+// get_id_by_slug('any-page-slug');
+
+function get_id_by_slug($page_slug) {
+	$page = get_page_by_path($page_slug);
+	if ($page) {
+		return $page->ID;
+	} else {
+		return null;
+	}
+}
 
 
 
