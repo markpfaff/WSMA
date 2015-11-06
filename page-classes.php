@@ -169,11 +169,12 @@
                             <?php endwhile; wp_reset_postdata(); ?>      
                         </a>
                     </div>
-                </div><!--/row-->
-            </div><!--/container--> 
         <!-- sidebar -->
         <?php get_sidebar( 'primary' ); ?>
         <!-- /sidebar -->
+                </div><!--/row-->
+            </div><!--/container--> 
+
     </div><!-- /row -->
 </div><!-- /container -->
 
