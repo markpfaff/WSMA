@@ -33,7 +33,10 @@
     <?php while (have_posts()) : the_post(); ?>
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+                        <!-- sidebar -->
+            <?php get_sidebar( 'primary' ); ?>
+            <!-- /sidebar -->
+            <div class="col-md-9">
                 <div class="post-box">
                 <h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
                 <p class="postmetadata">
@@ -47,9 +50,7 @@
                 </div>
                 <?php endwhile; ?>
             </div><!-- /col-md-8 -->
-                    <!-- sidebar -->
-            <?php get_sidebar( 'news' ); ?>
-            <!-- /sidebar -->
+
                 <nav class="post-nav">
                     <p class="alignleft"><?php next_posts_link('&laquo; Older Posts','1000') ?></p>
                     <p class="alignright"><?php previous_posts_link('Newer Posts &raquo;','1000') ?></p>
