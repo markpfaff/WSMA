@@ -29,7 +29,7 @@
                         <?php $thumbquery = new WP_Query(array( 'name' => 'bass', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
-                        <a href="<?php the_permalink; ?>">
+                        <a href="<?php echo the_permalink(); ?>">
 
                             <?php the_post_thumbnail( 'medium' ); ?>
 
@@ -40,7 +40,7 @@
                         <?php $thumbquery = new WP_Query(array( 'name' => 'brass', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
-                        <a href="<?php the_permalink; ?>">
+                        <a href="<?php the_permalink(); ?>">
 
                             <?php the_post_thumbnail( 'medium' ); ?>
 
@@ -51,7 +51,7 @@
                         <?php $thumbquery = new WP_Query(array( 'name' => 'drums', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
-                        <a href="<?php the_permalink; ?>">
+                        <a href="<?php the_permalink(); ?>">
 
                             <?php the_post_thumbnail( 'medium' ); ?>
 
@@ -66,7 +66,7 @@
                         <?php $thumbquery = new WP_Query(array( 'name' => 'group-classes', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
-                        <a href="<?php the_permalink; ?>">
+                        <a href="<?php the_permalink(); ?>">
 
                             <?php the_post_thumbnail( 'medium' ); ?>
 
@@ -77,7 +77,7 @@
                         <?php $thumbquery = new WP_Query(array( 'name' => 'guitar', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
-                        <a href="<?php the_permalink; ?>">
+                        <a href="<?php the_permalink(); ?>">
 
                             <?php the_post_thumbnail( 'medium' ); ?>
 
@@ -88,7 +88,7 @@
                         <?php $thumbquery = new WP_Query(array( 'name' => 'multiple-instruments', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
-                        <a href="<?php the_permalink; ?>">
+                        <a href="<?php the_permalink(); ?>">
 
                             <?php the_post_thumbnail( 'medium' ); ?>
 
@@ -103,7 +103,7 @@
                          <?php $thumbquery = new WP_Query(array( 'name' => 'piano', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
-                        <a href="<?php the_permalink; ?>">
+                        <a href="<?php the_permalink(); ?>">
 
                             <?php the_post_thumbnail( 'medium' ); ?>
 
@@ -114,7 +114,7 @@
                         <?php $thumbquery = new WP_Query(array( 'name' => 'pianovoice', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
-                        <a href="<?php the_permalink; ?>">
+                        <a href="<?php the_permalink(); ?>">
 
                             <?php the_post_thumbnail( 'medium' ); ?>
 
@@ -125,7 +125,7 @@
                         <?php $thumbquery = new WP_Query(array( 'name' => 'strings', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
-                        <a href="<?php the_permalink; ?>">
+                        <a href="<?php the_permalink(); ?>">
 
                             <?php the_post_thumbnail( 'medium' ); ?>
 
@@ -140,7 +140,7 @@
                         <?php $thumbquery = new WP_Query(array( 'name' => 'voice', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
-                        <a href="<?php the_permalink; ?>">
+                        <a href="<?php the_permalink(); ?>">
 
                             <?php the_post_thumbnail( 'medium' ); ?>
 
@@ -151,7 +151,7 @@
                         <?php $thumbquery = new WP_Query(array( 'name' => 'woodwinds', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
-                        <a href="<?php the_permalink; ?>">
+                        <a href="<?php the_permalink(); ?>">
 
                             <?php the_post_thumbnail( 'medium' ); ?>
 
@@ -162,7 +162,7 @@
                         <?php $thumbquery = new WP_Query(array( 'name' => 'misc', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
-                        <a href="<?php the_permalink; ?>">
+                        <a href="<?php the_permalink(); ?>">
 
                             <?php the_post_thumbnail( 'medium' ); ?>
 
