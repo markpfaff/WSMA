@@ -4,12 +4,13 @@
 
 <!-- content start -->
 <div id="container" class="page">
-    
-   
     <div class="row">
+        <!-- sidebar -->
+        <?php get_sidebar( 'primary' ); ?>
+        <!-- /sidebar -->
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
-        <h1 class="col-md-8 page-title"><?php the_title(); ?></h1>
+        <h1 class="col-md-9 page-title"><?php the_title(); ?></h1>
         <article class="page col-md-9" id="post-<?php the_ID(); ?>">
             <div class="entry">
             <?php the_content('<p class="serif">More &raquo;</p>'); ?>
@@ -169,9 +170,7 @@
                             <?php endwhile; wp_reset_postdata(); ?>      
                         </a>
                     </div>
-        <!-- sidebar -->
-        <?php get_sidebar( 'primary' ); ?>
-        <!-- /sidebar -->
+
                 </div><!--/row-->
             </div><!--/container--> 
 

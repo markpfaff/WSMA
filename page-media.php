@@ -5,9 +5,12 @@
 <!-- content start -->
 <div id="container" class="page">
     
-                <div class="container col-md-9">
+                <div class="container col-md-12">
                     <div class="row">
-                        <div class="col-md-4">
+                        <!-- sidebar -->
+                        <?php get_sidebar( 'primary' ); ?>
+                        <!-- /sidebar --> 
+                        <div class="col-md-3">
                             <?php $thumbquery = new WP_Query(array( 'name' => 'audio', 'post_type' => 'page' ));
                                    while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
 
@@ -18,7 +21,7 @@
                                 <?php endwhile; wp_reset_postdata(); ?>      
                             </a>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <?php $thumbquery = new WP_Query(array( 'name' => 'photos', 'post_type' => 'page' ));
                                    while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
 
@@ -29,7 +32,7 @@
                                 <?php endwhile; wp_reset_postdata(); ?>      
                             </a>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <?php $thumbquery = new WP_Query(array( 'name' => 'video', 'post_type' => 'page' ));
                                    while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
 
@@ -60,10 +63,7 @@
             </div>
         </article>
         <?php endif; ?>
-        
-        <!-- sidebar -->
-        <?php get_sidebar( 'primary' ); ?>
-        <!-- /sidebar --> 
+       
 
     </div><!-- /row -->
 </div><!-- /container -->
