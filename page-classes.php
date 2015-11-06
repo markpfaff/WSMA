@@ -63,7 +63,7 @@
                         <div class="container col-md-9">
                 <div class="row">
                     <div class="col-md-4">
-                        <?php $thumbquery = new WP_Query(array( 'name' => 'group', 'post_type' => 'page' ));
+                        <?php $thumbquery = new WP_Query(array( 'name' => 'group-classes', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
                         <a href="<?php the_permalink; ?>">

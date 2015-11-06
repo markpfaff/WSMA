@@ -8,23 +8,41 @@
                 <div class="container col-md-9">
                     <div class="row">
                         <div class="col-md-4">
-                            <a href="<?php esc_url( get_permalink( get_page_by_title( 'Audio' ) ) ); ?>">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/news.png" alt="Listen to audio"/>
+                            <?php $thumbquery = new WP_Query(array( 'name' => 'audio', 'post_type' => 'page' ));
+                                   while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
+
+                            <a href="<?php the_permalink; ?>">
+
+                                <?php the_post_thumbnail( 'medium' ); ?>
+
+                                <?php endwhile; wp_reset_postdata(); ?>      
                             </a>
                         </div>
                         <div class="col-md-4">
-                            <a href="<?php esc_url( get_permalink( get_page_by_title( 'Video' ) ) ); ?>">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/media.png" alt="Watch Videos"/>        
+                            <?php $thumbquery = new WP_Query(array( 'name' => 'photos', 'post_type' => 'page' ));
+                                   while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
+
+                            <a href="<?php the_permalink; ?>">
+
+                                <?php the_post_thumbnail( 'medium' ); ?>
+
+                                <?php endwhile; wp_reset_postdata(); ?>      
                             </a>
                         </div>
                         <div class="col-md-4">
-                            <a href="<?php esc_url( get_permalink( get_page_by_title( 'Photos' ) ) ); ?>">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/testimonials.png" alt="Look at Photos"/>        
+                            <?php $thumbquery = new WP_Query(array( 'name' => 'video', 'post_type' => 'page' ));
+                                   while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
+
+                            <a href="<?php the_permalink; ?>">
+
+                                <?php the_post_thumbnail( 'medium' ); ?>
+
+                                <?php endwhile; wp_reset_postdata(); ?>      
                             </a>
                         </div>
                     </div><!--/row-->
                 </div><!--/container-->   
-                        	<!-- sidebar -->
+            <!-- sidebar -->
             <?php get_sidebar( 'primary' ); ?>
             <!-- /sidebar -->
     <div class="row">
