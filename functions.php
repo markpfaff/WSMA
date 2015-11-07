@@ -50,9 +50,9 @@ function my_register_sidebars() {
 
     register_sidebar(    
     		array(
-			'id' => 'news',
-			'name' => __( 'News Sidebar' ),
-            'class' => 'news-sidebar',
+			'id' => 'footer',
+			'name' => __( 'Footer Sidebar' ),
+            'class' => 'footer-sidebar',
 			'before_widget' => '<li id="%1$s" class="widget %2$s">',
 			'after_widget' => '</li>',
 			'before_title' => '<h3 class="widget-title">',

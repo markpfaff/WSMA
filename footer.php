@@ -2,7 +2,14 @@
 
 
 
-            <footer>
+            <footer class="content-info">
+                
+                <h3>West Side Music Academy</h3>
+                <div class="container">
+                  <div class="row distribute-widgets">
+                      <?php dynamic_sidebar( 'footer'); ?>
+                  </div>                    
+                </div>
                 <ul>
                     <li><?php print ("&copy; " . date ('Y') . " "); ?> &nbsp|&nbsp WSMA &nbsp|&nbsp Design by SCC Group 8</li>
                 </ul>
@@ -19,6 +26,14 @@
         (function($) {
             $(window).load(function() {
             $('.flexslider').flexslider();
+            });
+            
+            var footer_widgets = $('.row.distribute-widgets > .widget'),
+            widget_count = footer_widgets.length,
+            col_num = Math.floor(12 / widget_count);
+
+            footer_widgets.each(function(index, val) {
+              $(this).addClass('col-sm-' + col_num);
             });
         })(jQuery);
 

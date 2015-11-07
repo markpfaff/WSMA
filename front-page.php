@@ -132,6 +132,7 @@
                     <?php 
                         $aboutquery = new WP_Query(array( 'name' => 'about', 'post_type' => 'page' ));
                         echo $aboutquery->get_the_title();
+                        
                         while ( $aboutquery->have_posts() ) : $aboutquery->the_post();
                     ?>
                         <h2><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
@@ -148,7 +149,7 @@
                 </div><!--/about-->   
                 
             </div>
-<small class="small-label">front-hipage.php</small>
+<small class="small-label">front-page.php</small>
 
 
 <?php get_footer(); ?>
