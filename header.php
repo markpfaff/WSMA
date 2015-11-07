@@ -59,7 +59,7 @@
                             <ul class="nav navbar-nav">
                                  <?php
                                     wp_nav_menu( array(
-                                        'menu'              => 'Main Menu',                
+                                        'menu'              => 'Primary',                
                                         'depth'             => 2,
                                         'container'         => 'div',
                                         'container_class'   => 'collapse navbar-collapse',

@@ -4,8 +4,9 @@
 
             <footer class="content-info">
                 
-                <h3>West Side Music Academy</h3>
                 <div class="container">
+                    <h3>West Side Music Academy</h3>
+
                   <div class="row distribute-widgets">
                       <?php dynamic_sidebar( 'footer'); ?>
                   </div>                    
