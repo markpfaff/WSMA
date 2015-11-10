@@ -1,4 +1,30 @@
 //custom.less
+//@media(max-width:767px){}
+//@media(min-width:768px){}
+//@media(min-width:992px){}
+//@media(min-width:1200px){}
+
+//@media(min-width:34em){//767px
+    
+//}
+//@media(min-width:48em){//768px
+    
+//}
+//@media(min-width:62em){//992px
+    
+//}
+//@media(min-width:75em){//1200px
+    
+//}
+
+/*force viewport device width on ie 10*/
+@-ms-viewport {
+    width:device-width;
+}
+
+html {
+    min-width: 600px;
+}
 
 img {
     max-width: 100%;
@@ -23,10 +49,16 @@ li {
 }
 
 .navbar-brand {
-    padding-top: 40px;
+    font-size: 24px;
+    padding-top: 40px;   
     
-    font-size: 3em;
+    @media(min-width:62em){//992px
+    
+        font-size: 3em;
+
+    }
 }
+
 
 .navbar-static-top {
     clear:both;
@@ -71,4 +103,7 @@ li#nav_menu-3 {
     margin-left: 60px;
 }
 
-footer 
+.navbar-nav {
+    margin: 0px auto;
+    width: 90%;
+}

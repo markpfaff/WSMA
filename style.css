@@ -6817,6 +6817,13 @@ button.close {
     display: none !important;
   }
 }
+/*force viewport device width on ie 10*/
+@-ms-viewport {
+  width: device-width;
+}
+html {
+  min-width: 600px;
+}
 img {
   max-width: 100%;
 }
@@ -6835,8 +6842,13 @@ li {
   float: left;
 }
 .navbar-brand {
+  font-size: 24px;
   padding-top: 40px;
-  font-size: 3em;
+}
+@media (min-width: 62em) {
+  .navbar-brand {
+    font-size: 3em;
+  }
 }
 .navbar-static-top {
   clear: both;
@@ -6868,4 +6880,8 @@ footer {
 }
 li#nav_menu-3 {
   margin-left: 60px;
+}
+.navbar-nav {
+  margin: 0px auto;
+  width: 90%;
 }

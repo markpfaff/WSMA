@@ -23,22 +23,25 @@
             <header>
                 <div class="container">
                     <div class="row">
-                        <div id="logo"><!-- logo -->
+                        
+                        <div id="logo" class="col-sm-9"><!-- logo -->
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                 <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.jpg" alt="logo" id="logo"/>
                             </a>
                             <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">West Side Music Academy</a>
 
                         </div><!-- /#logo -->
-                        <div class="header-buttons">
-                            <a href="<?php echo get_page_link( get_page_by_title( 'enroll' )->ID ); ?>">
-                                <button type="button" class="btn btn-default btn-lg">Enroll</button>
-                            </a>
-                            <a href="https://app.jackrabbitclass.com/portal/ppLogin.asp?id=518858">
-                                <button type="button" class="btn btn-default btn-lg">Login</button>
-                            </a>
-                        </div><!-- /.header-buttons -->
-                        <?php get_search_form() ;?> 
+                        <div class="col-sm-3">
+                            <div class="header-buttons">
+                                <a href="<?php echo get_page_link( get_page_by_title( 'enroll' )->ID ); ?>">
+                                    <button type="button" class="btn btn-info btn-block">Enroll</button>
+                                </a>
+                                <a href="https://app.jackrabbitclass.com/portal/ppLogin.asp?id=518858">
+                                    <button type="button" class="btn btn-info btn-block">Login</button>
+                                </a>
+                            </div><!-- /.header-buttons -->
+                            <?php get_search_form() ;?> 
+                        </div>
                     </div><!-- /.row -->
                 </div><!-- /.container -->
 
