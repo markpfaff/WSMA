@@ -26,7 +26,24 @@ Template Name: Individual Class Page
                 </a>
             </div>
         </article>
+        <div class="container col-md-9">
+            <div class="row">
+                
+                <?php $thumbquery = new WP_Query(array( 'meta_value' => the_slug(), 'post_type' => 'teachers' ));
+                           while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
+                <div class="col-md-3">
+                    
+                    <a href="<?php the_permalink; ?>">
 
+                        <?php the_post_thumbnail( 'medium' ); ?>
+
+                             
+                    </a>
+                </div>
+                <?php endwhile; wp_reset_postdata(); ?> 
+            </div><!--/row-->
+        </div><!--/container-->   
+        
         <?php endwhile; else:?>
         <article class="page col-md-9 not-found">
             <div class="entry">

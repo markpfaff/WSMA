@@ -21,12 +21,6 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
-//customize container class for menus
-//function set_container_class ($args) {
-//$args['container_class'] = str_replace(' ','-',$args['theme_location']).'-nav'; return $args;
-//}
-//add_filter ('wp_nav_menu_args', 'set_container_class');
-
 //register sidebars
 add_action( 'widgets_init', 'my_register_sidebars' );
 
@@ -144,10 +138,97 @@ if (!is_admin()) {
     add_action( 'wp_enqueue_scripts', 'wsma_scripts', 12 );
     }
 
+//Create custom post type function
+function create_posttype() {
+
+	register_post_type( 'teachers',
+	//  Options
+		array(
+			'labels' => array(
+				'name' => __( 'Teachers' ),
+				'singular_name' => __( 'Teachers' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array('slug' => 'teachers'),
+		)
+	);
+}
+add_action( 'init', 'create_posttype' );
     
+/*
+* Creating a function to create our CPT
+*/
+
+function custom_post_type() {
+
+// Set UI labels for Custom Post Type
+	$labels = array(
+		'name'                => _x( 'Teachers', 'Post Type General Name', 'wsma' ),
+		'singular_name'       => _x( 'Teacher', 'Post Type Singular Name', 'wsma' ),
+		'menu_name'           => __( 'Teachers', 'wsma' ),
+		'parent_item_colon'   => __( 'Parent Teacher', 'wsma' ),
+		'all_items'           => __( 'All Teachers', 'wsma' ),
+		'view_item'           => __( 'View Teacher', 'wsma' ),
+		'add_new_item'        => __( 'Add New Teacher', 'wsma' ),
+		'add_new'             => __( 'Add New', 'wsma' ),
+		'edit_item'           => __( 'Edit Teacher', 'wsma' ),
+		'update_item'         => __( 'Update Teacher', 'wsma' ),
+		'search_items'        => __( 'Search Teacher', 'wsma' ),
+		'not_found'           => __( 'Not Found', 'wsma' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'wsma' ),
+	);
+	
+// Set other options for Custom Post Type
+	
+	$args = array(
+		'label'               => __( 'teachers', 'wsma' ),
+		'description'         => __( 'Movie news and reviews', 'wsma' ),
+		'labels'              => $labels,
+		// Features this CPT supports in Post Editor
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+		// You can associate this CPT with a taxonomy or custom taxonomy. 
+		'taxonomies'          => array( 'classes' ),
+		/* A hierarchical CPT is like Pages and can have
+		* Parent and child items. A non-hierarchical CPT
+		* is like Posts.
+		*/	
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'page',
+	);
+	
+	// Registering your Custom Post Type
+	register_post_type( 'teachers', $args );
+
+}
+
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not 
+* unnecessarily executed. 
+*/
+
+add_action( 'init', 'custom_post_type', 0 );
+
+//get the page slug
+function the_slug() {
+    $post_data = get_post($post->ID, ARRAY_A);
+    $slug = $post_data['post_name'];
+    return $slug; 
+}
+
+
 
 // get_id_by_slug('any-page-slug');
-
 function get_id_by_slug($page_slug) {
 	$page = get_page_by_path($page_slug);
 	if ($page) {
@@ -158,4 +239,16 @@ function get_id_by_slug($page_slug) {
 }
 
 
+
+// add categories for attachments 
+function add_categories_for_attachments() {     
+    register_taxonomy_for_object_type( 'category', 'attachment' );     
+} 
+add_action( 'init' , 'add_categories_for_attachments' ); 
+
+// add tags for attachments 
+function add_tags_for_attachments() {
+    register_taxonomy_for_object_type( 'post_tag', 'attachment' ); 
+} 
+add_action( 'init' , 'add_tags_for_attachments' );
 
