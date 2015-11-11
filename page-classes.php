@@ -28,7 +28,7 @@ Template Name: Individual Class Page
         </article>
         <div class="container col-md-9">
             <div class="row">
-                
+                <h2>Teachers</h2>
                 <?php $thumbquery = new WP_Query(array( 'meta_value' => the_slug(), 'post_type' => 'teachers' ));
                            while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                 <div class="col-md-3">
@@ -36,8 +36,7 @@ Template Name: Individual Class Page
                     <a href="<?php the_permalink; ?>">
 
                         <?php the_post_thumbnail( 'medium' ); ?>
-
-                             
+ 
                     </a>
                 </div>
                 <?php endwhile; wp_reset_postdata(); ?> 
