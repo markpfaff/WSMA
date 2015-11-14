@@ -43,7 +43,8 @@ li {
     clear:both;
 }
 
-#logo img {
+#logo-mobile img,
+#logo-desktop img {
     width: 100px;
     float:left;
 }
@@ -82,8 +83,19 @@ footer {
 }
 
 .header-buttons a {
-    float:right;
+
     margin-top:10px;
+    
+    @media(min-width:48em){//768px
+            float:right;
+    }
+}
+
+.login-enroll-mobile .header-buttons a {
+
+    margin: 0px auto;
+    width: 90%;
+
 }
 
 .header-buttons a:nth-child(2) {
@@ -97,6 +109,12 @@ footer {
 
 #sidebar {
     margin-top: 40px;
+    display:none;
+    
+    @media(min-width:48em){//768px
+         display:block;
+        
+    }
 }
 
 li#nav_menu-3 {
@@ -106,4 +124,83 @@ li#nav_menu-3 {
 .navbar-nav {
     margin: 0px auto;
     width: 90%;
+}
+
+.navbar-collapse {
+    clear: both;
+}
+
+#search {
+    float:right;
+    clear: both;
+    
+}
+
+.login-enroll-desktop {
+    display:none;
+    
+    @media(min-width:48em){//768px
+                           
+         display:block;
+        
+    }
+}
+
+.btn-xl {
+    display: inline-block;
+    margin-bottom: 0px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -moz-user-select: none;
+    width: 49%;
+    
+}
+
+.mobile-toggle {
+    padding: 6.25px 10px;
+}
+
+.navbar-brand-desktop {
+
+    display:none;
+    
+    @media(min-width:48em){//768px
+
+     display:block;
+        
+    }
+    
+}
+
+#logo-desktop {
+
+    display:none;
+    
+    @media(min-width:48em){//768px
+
+     display:block;
+        
+    }
+    
+}
+
+.distribute-widgets {
+
+    display:none;
+    
+    @media(min-width:48em){//768px
+
+     display:block;
+        
+    }
+    
 }

@@ -36,6 +36,7 @@
             footer_widgets.each(function(index, val) {
               $(this).addClass('col-sm-' + col_num);
             });
+
         })(jQuery);
 
         </script><!-- / Flex Slider -->

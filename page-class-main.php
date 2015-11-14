@@ -29,7 +29,7 @@ Template Name: Classes Main Page
         <?php endif; ?>
             <div class="container col-md-9">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-xs-6 col-md-4">
                         <?php $thumbquery = new WP_Query(array( 'name' => 'bass', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
@@ -40,7 +40,7 @@ Template Name: Classes Main Page
                             <?php endwhile; wp_reset_postdata(); ?>      
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-6 col-md-4">
                         <?php $thumbquery = new WP_Query(array( 'name' => 'brass', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
@@ -51,7 +51,7 @@ Template Name: Classes Main Page
                             <?php endwhile; wp_reset_postdata(); ?>      
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-6 col-md-4">
                         <?php $thumbquery = new WP_Query(array( 'name' => 'drums', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
@@ -66,7 +66,7 @@ Template Name: Classes Main Page
             </div><!--/container--> 
                         <div class="container col-md-9">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-xs-6 col-md-4">
                         <?php $thumbquery = new WP_Query(array( 'name' => 'group-classes', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
@@ -77,7 +77,7 @@ Template Name: Classes Main Page
                             <?php endwhile; wp_reset_postdata(); ?>      
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-6 col-md-4">
                         <?php $thumbquery = new WP_Query(array( 'name' => 'guitar', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
@@ -88,7 +88,7 @@ Template Name: Classes Main Page
                             <?php endwhile; wp_reset_postdata(); ?>      
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-6 col-md-4">
                         <?php $thumbquery = new WP_Query(array( 'name' => 'multiple-instruments', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
@@ -103,7 +103,7 @@ Template Name: Classes Main Page
             </div><!--/container--> 
             <div class="container col-md-9">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-xs-6 col-md-4">
                          <?php $thumbquery = new WP_Query(array( 'name' => 'piano', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
@@ -114,7 +114,7 @@ Template Name: Classes Main Page
                             <?php endwhile; wp_reset_postdata(); ?>      
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-6 col-md-4">
                         <?php $thumbquery = new WP_Query(array( 'name' => 'pianovoice', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
@@ -125,7 +125,7 @@ Template Name: Classes Main Page
                             <?php endwhile; wp_reset_postdata(); ?>      
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-6 col-md-4">
                         <?php $thumbquery = new WP_Query(array( 'name' => 'strings', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
@@ -140,7 +140,7 @@ Template Name: Classes Main Page
             </div><!--/container--> 
             <div class="container col-md-9">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-xs-6 col-md-4">
                         <?php $thumbquery = new WP_Query(array( 'name' => 'voice', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
@@ -151,7 +151,7 @@ Template Name: Classes Main Page
                             <?php endwhile; wp_reset_postdata(); ?>      
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-6 col-md-4">
                         <?php $thumbquery = new WP_Query(array( 'name' => 'woodwinds', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
@@ -162,7 +162,7 @@ Template Name: Classes Main Page
                             <?php endwhile; wp_reset_postdata(); ?>      
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-6 col-md-4">
                         <?php $thumbquery = new WP_Query(array( 'name' => 'misc', 'post_type' => 'page' ));
                                while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
