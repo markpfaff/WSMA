@@ -38,6 +38,9 @@ Template Name: Individual Class Page
                         <?php the_post_thumbnail( 'medium' ); ?>
  
                     </a>
+                    <caption><?php echo the_excerpt(); ?></caption>
+                    
+                    
                 </div>
                 <?php endwhile; wp_reset_postdata(); ?> 
             </div><!--/row-->
