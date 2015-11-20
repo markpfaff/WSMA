@@ -7149,23 +7149,20 @@ h1 {
 }
 .latest-thumb {
   margin-right: 10px;
+  margin-bottom: 5px;
 }
 @media (min-width: 48em) {
-  .latest-thumb h3 {
-    font-size: 14px;
-  }
   .latest-thumb img {
     width: 50px;
     height: auto;
+    margin-bottom: 10px;
   }
 }
 @media (min-width: 75em) {
-  .latest-thumb h3 {
-    font-size: 24px;
-  }
   .latest-thumb img {
-    width: auto;
+    width: 100px;
     height: auto;
+    margin-bottom: 20px;
   }
 }
 #sidebar {
