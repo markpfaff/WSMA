@@ -32,10 +32,12 @@ Template Name: Individual Class Page
                 <?php $thumbquery = new WP_Query(array( 'meta_value' => the_slug(), 'post_type' => 'teachers' ));
                            while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                 <div class="col-md-3">
-                    
-                    <a href="<?php the_permalink; ?>">
 
-                        <?php the_post_thumbnail( 'medium' ); ?>
+}
+                    <a href="<?php the_permalink; ?>">
+                        <?php  get_post_thumbnail_id('medium');
+                        echo '<img width="100%" src="' . $image_src[0] . '">';?>
+                        <?php //the_post_thumbnail( 'medium' ); ?>
  
                     </a>
                     <caption><?php echo the_excerpt(); ?></caption>
@@ -61,7 +63,7 @@ Template Name: Individual Class Page
     </div><!-- /row -->
 </div><!-- /container -->
 
-<small class="small-label">page-classes.php</small>
+<small class="small-label">page-classes1.php</small>
 
 <?php get_footer(); ?>
 

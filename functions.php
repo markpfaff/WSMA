@@ -63,6 +63,11 @@ add_post_type_support( 'page', 'excerpt' );
 //add support for post thumbnails
 add_theme_support( 'post-thumbnails' );
 
+add_image_size( 'sml_size', 300 ); 
+add_image_size( 'mid_size', 600 ); 
+add_image_size( 'lrg_size', 1200 ); 
+add_image_size( 'sup_size', 2400 );
+
 // get child pages
 function get_child_pages() {
 

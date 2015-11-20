@@ -25,9 +25,9 @@
                 <div class="container">
                     <div class="row">
                         
-                        <div id="logo-desktop" class="col-sm-9"><!-- logo -->
+                        <div class="logo-desktop col-sm-9"><!-- logo -->
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.jpg" alt="logo" id="logo"/>
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo-bw.png" alt="logo" id="logo"/>
                             </a>
                             <a class="navbar-brand navbar-brand-desktop" href="<?php echo esc_url( home_url() ); ?>">West Side Music Academy</a>
 
@@ -49,9 +49,9 @@
 
                 
                 <div class="navbar navbar-default navbar-static-top" role="navigation">
-                        <div id="logo-mobile" class="col-sm-9 hidden-sm hidden-md hidden-lg"><!-- logo -->
+                        <div class="logo-mobile col-sm-9 hidden-sm hidden-md hidden-lg"><!-- logo -->
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.jpg" alt="logo" id="logo"/>
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo-bw.png" alt="logo" id="logo"/>
                             </a>
                             <a class="navbar-brand navbar-brand-mobile hidden-sm hidden-md hidden-lg" href="<?php echo esc_url( home_url() ); ?>">West Side Music Academy</a>
 
@@ -117,6 +117,13 @@
                     </div><!-- /.row -->
                 </div><!-- /.container -->
             </header>
+            <div class="breadcrumbs">
 
+                <?php if(! is_page( 'home' ) && function_exists('bcn_display'))
+                {
+                    bcn_display();
+                }?>
+
+            </div>
 
             <div class="container">

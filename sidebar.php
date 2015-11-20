@@ -1,4 +1,4 @@
-<div class="col-md-3 pull-right">
+<div class="sidebar-container">
 
 	<div id="sidebar" role="complementary">
         
