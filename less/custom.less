@@ -69,20 +69,28 @@ body {
 
 img {
     max-width: 100%;
+    border-radius:@border-radius-base;
 }
+
 img.attachment-medium {
-height: auto;
+    height: auto;
 }
 
 .entry {
     background:@brand-orange;
-    
+    border-radius: @border-radius-base;
+    padding: 10px;
     
 }
 
 li {
     list-style-type: none;
 }
+
+blockquote {
+    border-left: 5px solid @brand-red;
+}
+
 
 .flexslider {
     padding-bottom: 20px;
@@ -380,7 +388,7 @@ h1 {
 }
 
 #sidebar {
-    margin-top: 40px;
+    //margin-top: 40px;
     display:none;
     background: @brand-yellow;
     border-radius:@border-radius-base;
@@ -570,4 +578,8 @@ footer {
     .make-md-column(4);
         
     }
+}
+
+.su-spoiler-style-fancy > .su-spoiler-title {
+    background: @brand-orange;
 }

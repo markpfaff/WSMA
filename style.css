@@ -6861,15 +6861,21 @@ body {
 }
 img {
   max-width: 100%;
+  border-radius: 4px;
 }
 img.attachment-medium {
   height: auto;
 }
 .entry {
   background: #f38220;
+  border-radius: 4px;
+  padding: 10px;
 }
 li {
   list-style-type: none;
+}
+blockquote {
+  border-left: 5px solid #bd4600;
 }
 .flexslider {
   padding-bottom: 20px;
@@ -7166,7 +7172,6 @@ h1 {
   }
 }
 #sidebar {
-  margin-top: 40px;
   display: none;
   background: #ffc629;
   border-radius: 4px;
@@ -7362,4 +7367,7 @@ footer a {
     float: left;
     width: 33.33333333%;
   }
+}
+.su-spoiler-style-fancy > .su-spoiler-title {
+  background: #f38220;
 }
