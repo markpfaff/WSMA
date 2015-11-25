@@ -9,9 +9,8 @@ Template Name: Media Page
 
 <!-- content start -->
 <div id="container" class="page">
-    
-                <div class="container col-md-12">
-                    <div class="row">
+    <div class="row">
+
                         <!-- sidebar -->
                         <?php get_sidebar( 'primary' ); ?>
                         <!-- /sidebar --> 
@@ -48,10 +47,8 @@ Template Name: Media Page
                                 <?php endwhile; wp_reset_postdata(); ?>      
                             </a>
                         </div>
-                    </div><!--/row-->
-                </div><!--/container-->   
-
-    <div class="row">
+  
+    
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
         <h1 class="col-md-9 page-title"><?php the_title(); ?></h1>

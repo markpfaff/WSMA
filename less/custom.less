@@ -556,17 +556,18 @@ footer {
 
 .classes-thumb-container {
     .make-xs-column(9);
+    margin-top:20px;
     
     @media(min-width:75em){//1200px
 
-    .make-md-column(3);
+    .make-md-column(9);
         
     }
 }
 
 .classes-thumb {
     .make-xs-column(6);
-
+    margin-bottom:20px;
     @media(min-width:48em){//768px
 
     .make-sm-column(4);
@@ -579,6 +580,15 @@ footer {
         
     }
 }
+
+.classes-intro {
+    @media(min-width:48em){//768px
+
+    .make-sm-column(9);
+        
+    }   
+}
+
 
 .su-spoiler-style-fancy > .su-spoiler-title {
     background: @brand-orange;

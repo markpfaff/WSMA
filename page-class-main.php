@@ -14,7 +14,7 @@ Template Name: Classes Main Page
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
         <h1 class="col-md-9 page-title"><?php the_title(); ?></h1>
-        <article class="page col-md-9" id="post-<?php the_ID(); ?>">
+        <article class="page classes-intro" id="post-<?php the_ID(); ?>">
             <div class="entry">
             <?php the_content('<p class="serif">More &raquo;</p>'); ?>
         	</div>
@@ -27,7 +27,7 @@ Template Name: Classes Main Page
             </div>
         </article>
         <?php endif; ?>
-            <div class="container col-md-9">
+            <div class="container classes-thumb-container">
                 <div class="row">
                     <div class="classes-thumb">
                         <?php $thumbquery = new WP_Query(array( 'name' => 'bass', 'post_type' => 'page' ));
