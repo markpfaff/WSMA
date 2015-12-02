@@ -23,7 +23,7 @@
 //@brand-yellow #ffc728 home> ctas, dest> sidebar #ffc728
 //@brand-orange #ff9933 home> about us box, classes> description
 //@body-bg #fffdf4 (off-white) body background, footer text #fffdf4
-//html background #fed15d
+//@brand-bg #fed15d html background 
 
 /*force viewport device width on ie 10*/
 @-ms-viewport {
@@ -49,7 +49,7 @@ html {
 }
 
 .container {
-    margin: 0 auto;
+    width:100%;
 }
 
 body {
@@ -74,6 +74,13 @@ img {
 
 img.attachment-medium {
     height: auto;
+    width:100%;
+    
+    @media(min-width:48em){//768px
+    width: auto;
+                           
+    }
+    
 }
 
 .entry {
@@ -115,7 +122,7 @@ blockquote {
     @media(min-width:48em){//768px
          top:15%;
         right:10%;
-        padding:15px;
+            padding: 15px 0px 15px 22px;
         width:40%;
         font-size:@font-size-h3; 
         border-radius:60px;
@@ -260,6 +267,11 @@ blockquote {
     border-radius: @border-radius-base;
     overflow: hidden;
     margin-bottom: 20px;
+    color: @body-bg;
+    
+    a {
+        color: @body-bg;
+    }
     
     @media(min-width:48em){//768px
         .make-sm-column(6);
@@ -554,34 +566,44 @@ footer {
 }
 
 
-.classes-thumb-container {
-    .make-xs-column(9);
+.main-thumb-container {
+    .make-xs-column(12);
     margin-top:20px;
     
-    @media(min-width:75em){//1200px
+    @media(min-width:48em){//768px
 
-    .make-md-column(9);
+    .make-sm-column(9);
         
     }
 }
 
-.classes-thumb {
+.main-thumb {
     .make-xs-column(6);
     margin-bottom:20px;
     @media(min-width:48em){//768px
 
-    .make-sm-column(4);
+    .make-sm-column(3);
         
     }    
     
     @media(min-width:75em){//1200px
 
-    .make-md-column(4);
+    .make-md-column(3);
         
     }
 }
 
-.classes-intro {
+.thumb-title {
+    text-align:center;
+}
+
+.page-intro-p {
+    color: @body-bg;
+    
+    a {
+        color: @body-bg;
+    }
+    
     @media(min-width:48em){//768px
 
     .make-sm-column(9);
@@ -591,5 +613,5 @@ footer {
 
 
 .su-spoiler-style-fancy > .su-spoiler-title {
-    background: @brand-orange;
+    background: @brand-bg !important;
 }

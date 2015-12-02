@@ -24,8 +24,6 @@
 
             </footer>
 
-        </main>
-        </script>
         <script src="//localhost:35729/livereload.js"></script>
 
         <!-- Flex Slider -->

@@ -8,7 +8,7 @@
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
         <h1 class="col-md-8"><?php the_title(); ?></h1>
-        <article class="page col-md-9" id="post-<?php the_ID(); ?>">
+        <article class="page page-intro-p" id="post-<?php the_ID(); ?>">
             <div class="entry">
             <?php the_content('<p class="serif">More &raquo;</p>'); ?>
         	</div>

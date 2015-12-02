@@ -9,11 +9,14 @@ Template Name: Individual Class Page
 <!-- content start -->
 <div id="container" class="page">
     <div class="row">
+                    <!-- sidebar -->
+            <?php get_sidebar( 'primary' ); ?>
+            <!-- /sidebar -->
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
         <h1 class="col-md-8"><?php the_title(); ?></h1>
 
-        <article class="page col-md-9" id="post-<?php the_ID(); ?>">
+        <article class="page page-intro-p" id="post-<?php the_ID(); ?>">
             <div class="entry">
             <?php the_content('<p class="serif">More &raquo;</p>'); ?>
         	</div>
@@ -26,14 +29,14 @@ Template Name: Individual Class Page
                 </a>
             </div>
         </article>
-        <div class="container col-md-9">
-            <div class="row">
+        <div class=" col-md-9">
                 <h2>Teachers</h2>
-                <?php $thumbquery = new WP_Query(array( 'meta_value' => the_slug(), 'post_type' => 'teachers' ));
-                           while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
-                <div class="col-md-3">
+                <?php $thumbquery = new WP_Query(array( 'name' => 'bobby-bob', 'post_type' => 'teachers' ));
+                           while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); 
+                           ?>
+                
+                <div class="col-xs-3">
 
-}
                     <a href="<?php the_permalink; ?>">
                         <?php  get_post_thumbnail_id('medium');
                         echo '<img width="100%" src="' . $image_src[0] . '">';?>
@@ -45,6 +48,7 @@ Template Name: Individual Class Page
                     
                 </div>
                 <?php endwhile; wp_reset_postdata(); ?> 
+
             </div><!--/row-->
         </div><!--/container-->   
         
@@ -57,10 +61,7 @@ Template Name: Individual Class Page
         </article>
         <?php endif; ?>
         
-        	<!-- sidebar -->
-            <?php get_sidebar( 'primary' ); ?>
-            <!-- /sidebar -->
-    </div><!-- /row -->
+
 </div><!-- /container -->
 
 <small class="small-label">page-classes1.php</small>

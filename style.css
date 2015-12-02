@@ -6843,7 +6843,7 @@ html {
   margin: 0 auto;
 }
 .container {
-  margin: 0 auto;
+  width: 100%;
 }
 body {
   max-width: 1200px;
@@ -6865,6 +6865,12 @@ img {
 }
 img.attachment-medium {
   height: auto;
+  width: 100%;
+}
+@media (min-width: 48em) {
+  img.attachment-medium {
+    width: auto;
+  }
 }
 .entry {
   background: #f38220;
@@ -6898,7 +6904,7 @@ blockquote {
   .flexslider-caption {
     top: 15%;
     right: 10%;
-    padding: 15px;
+    padding: 15px 0px 15px 22px;
     width: 40%;
     font-size: 24px;
     border-radius: 60px;
@@ -7062,12 +7068,16 @@ blockquote {
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 20px;
+  color: #fffdf4;
 }
 @media (min-width: 992px) {
   .home-about {
     float: left;
     width: 66.66666667%;
   }
+}
+.home-about a {
+  color: #fffdf4;
 }
 @media (min-width: 48em) {
   .home-about {
@@ -7310,30 +7320,30 @@ footer a {
     display: block;
   }
 }
-.classes-thumb-container {
+.main-thumb-container {
   position: relative;
   float: left;
-  width: 75%;
+  width: 100%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 20px;
 }
-@media (min-width: 75em) {
-  .classes-thumb-container {
+@media (min-width: 48em) {
+  .main-thumb-container {
     position: relative;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
   }
 }
-@media (min-width: 75em) and (min-width: 992px) {
-  .classes-thumb-container {
+@media (min-width: 48em) and (min-width: 768px) {
+  .main-thumb-container {
     float: left;
     width: 75%;
   }
 }
-.classes-thumb {
+.main-thumb {
   position: relative;
   float: left;
   width: 50%;
@@ -7343,7 +7353,7 @@ footer a {
   margin-bottom: 20px;
 }
 @media (min-width: 48em) {
-  .classes-thumb {
+  .main-thumb {
     position: relative;
     min-height: 1px;
     padding-left: 15px;
@@ -7351,13 +7361,13 @@ footer a {
   }
 }
 @media (min-width: 48em) and (min-width: 768px) {
-  .classes-thumb {
+  .main-thumb {
     float: left;
-    width: 33.33333333%;
+    width: 25%;
   }
 }
 @media (min-width: 75em) {
-  .classes-thumb {
+  .main-thumb {
     position: relative;
     min-height: 1px;
     padding-left: 15px;
@@ -7365,13 +7375,22 @@ footer a {
   }
 }
 @media (min-width: 75em) and (min-width: 992px) {
-  .classes-thumb {
+  .main-thumb {
     float: left;
-    width: 33.33333333%;
+    width: 25%;
   }
 }
+.thumb-title {
+  text-align: center;
+}
+.page-intro-p {
+  color: #fffdf4;
+}
+.page-intro-p a {
+  color: #fffdf4;
+}
 @media (min-width: 48em) {
-  .classes-intro {
+  .page-intro-p {
     position: relative;
     min-height: 1px;
     padding-left: 15px;
@@ -7379,11 +7398,11 @@ footer a {
   }
 }
 @media (min-width: 48em) and (min-width: 768px) {
-  .classes-intro {
+  .page-intro-p {
     float: left;
     width: 75%;
   }
 }
 .su-spoiler-style-fancy > .su-spoiler-title {
-  background: #f38220;
+  background: #fed15d !important;
 }

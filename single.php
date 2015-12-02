@@ -2,7 +2,7 @@
 
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<div id="main" class="site-main" role="main">
             <?php if (have_posts()) : while(have_posts()) : the_post();?> 
             <div class="jumbotron">
                 <div class="container">
@@ -51,16 +51,16 @@
 
                         <?php comments_template(); ?>
 
-                    </div> <!-- .col-md-8 -->
+                    </div> <!-- /col-md-8 -->
 
                         <?php endwhile; endif; ?>
 
                         <?php get_sidebar(); ?>
 
-                </div> <!-- .row -->
-            </div> <!-- .container -->
- 		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+                </div> <!-- /row -->
+            </div> <!-- /container -->
+ 		</div><!-- /main -->
+	</div><!-- /content-area -->
 
 
 <small class="small-label">single.php</small>

@@ -24,16 +24,12 @@
 ?>
 <?php get_header(); ?>
 
-<!-- START CONTENT -->
-<div id="content" class="index">
-
-
-<?php if (have_posts()) : ?>
+    <?php if (have_posts()) : ?>
 
     <?php while (have_posts()) : the_post(); ?>
     <div class="container">
         <div class="row">
-                        <!-- sidebar -->
+            <!-- sidebar -->
             <?php get_sidebar( 'primary' ); ?>
             <!-- /sidebar -->
             <div class="col-md-9">
@@ -59,8 +55,14 @@
 
         </div><!-- /row -->
     </div><!-- /container -->
+    
+    <!--following divs were added to fix footer width not being 100% -->
+        </div><!-- /row -->
+    </div><!-- /container -->
+</div><!-- /container -->
+    <!--preceding divs were added to fix footer width not being 100% -->
 
-<?php endif; ?>
-</div><!-- /content -->
+    <?php endif; ?>
+
 <small class="small-label">index.php</small>
 <?php get_footer(); ?>

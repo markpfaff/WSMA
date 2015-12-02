@@ -18,8 +18,6 @@
         
     <body <?php body_class(); ?>>
 
-        <main>
-
             <header>
 
                 <div class="container">

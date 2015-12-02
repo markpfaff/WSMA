@@ -11,7 +11,7 @@
                                         //echo $captionquery->get_the_title();
                                         while ( $captionquery->have_posts() ) : $captionquery->the_post();
                                     ?>
-                                        <?php echo the_excerpt(); ?>
+                                        <?php echo the_content(); ?>
 
                                     <?php
                                         endwhile;
@@ -42,7 +42,7 @@
                         <div class="flexslider-bottom-caption">
                             <div class="flexslider-bottom-caption-inner">
                                 <?php 
-                                    $captionquery = new WP_Query(array( 'name' => 'about', 'post_type' => 'page' ));
+                                    $captionquery = new WP_Query(array( 'name' => 'home', 'post_type' => 'page' ));
                                     //echo $captionquery->get_the_title();
                                     while ( $captionquery->have_posts() ) : $captionquery->the_post();
                                 ?>

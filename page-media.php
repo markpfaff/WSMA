@@ -8,13 +8,13 @@ Template Name: Media Page
 
 
 <!-- content start -->
-<div id="container" class="page">
+<div class="container main-thumb-container">
     <div class="row">
 
                         <!-- sidebar -->
                         <?php get_sidebar( 'primary' ); ?>
                         <!-- /sidebar --> 
-                        <div class="col-md-3">
+                        <div class="main-thumb">
                             <?php $thumbquery = new WP_Query(array( 'name' => 'audio', 'post_type' => 'page' ));
                                    while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
 
@@ -25,7 +25,7 @@ Template Name: Media Page
                                 <?php endwhile; wp_reset_postdata(); ?>      
                             </a>
                         </div>
-                        <div class="col-md-3">
+                        <div class="main-thumb">
                             <?php $thumbquery = new WP_Query(array( 'name' => 'photos', 'post_type' => 'page' ));
                                    while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
 
@@ -36,7 +36,7 @@ Template Name: Media Page
                                 <?php endwhile; wp_reset_postdata(); ?>      
                             </a>
                         </div>
-                        <div class="col-md-3">
+                        <div class="main-thumb">
                             <?php $thumbquery = new WP_Query(array( 'name' => 'video', 'post_type' => 'page' ));
                                    while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
 
@@ -47,7 +47,8 @@ Template Name: Media Page
                                 <?php endwhile; wp_reset_postdata(); ?>      
                             </a>
                         </div>
-  
+  <div class="container clearboth">
+    <div class="row">
     
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
@@ -65,7 +66,8 @@ Template Name: Media Page
             </div>
         </article>
         <?php endif; ?>
-       
+      </div><!-- /row -->
+</div><!-- /container -->     
 
     </div><!-- /row -->
 </div><!-- /container -->
