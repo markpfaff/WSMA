@@ -66,7 +66,6 @@
                 <div class="container">
                     <div class="row home-row home-cta-row">
                         <div class="home-ctas">
-                            <div class="home-ctas-inner">
                                 <?php 
                                     $newsquery = new WP_Query(array( 'name' => 'news', 'post_type' => 'page' ));
                                     echo $newsquery->get_the_title();
@@ -79,10 +78,8 @@
                                     endwhile;
                                     wp_reset_postdata();
                                 ?>  
-                            </div>
                         </div>
                         <div class="home-ctas">
-                            <div class="home-ctas-inner">
                                 <h2>Latest Media</h2>
                                 <div class="row home-row">
                                     <a href="<?php esc_url( get_permalink( get_page_by_title( 'Photos' ) ) ); ?>">
@@ -139,10 +136,8 @@
                                         <h3 class="pull-left">Latest Audio</h3>   
                                     </a>  
                                 </div><!--/row-->
-                            </div>
                         </div>
                         <div class="home-ctas">
-                            <div class="home-ctas-inner">
                                 <a href="<?php esc_url( get_permalink( get_page_by_title( 'Classes' ) ) ); ?>">
                                     <h2>Classes</h2>
                                 </a>
@@ -164,7 +159,6 @@
                                             </a>
                                         </li>
                                     </ul>
-                            </div>
                         </div>
                     </div><!--/row-->
                 </div><!--/container--> 

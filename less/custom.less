@@ -127,21 +127,19 @@ blockquote {
     }
 
     @media(min-width:48em){//768px
-         top:15%;
-        right:10%;
-            padding: 15px 0px 15px 22px;
+        top: 10%;
+        right: 10%;
+        padding: 23px;
         width:40%;
-        font-size:@font-size-h3; 
+        font-size: 20px; 
         border-radius:60px;
         background:rgba(0,0,0,0.5);
     }
-    @media(min-width:62em){//992px
 
-    }
     @media(min-width:75em){//1200px
         top:15%;
         right:7%;
-        padding:15px;
+        padding:30px;
         width:40%;
         font-size:@font-size-h2;
 
@@ -178,14 +176,15 @@ blockquote {
 
 
 .home-youtube {
-    .make-sm-column(4);
-    
+    .make-sm-column(12);
+    float:none;
+    clear:both;
     iframe {
         width: 100%;
         height:300px;                  
     }
     
-    @media(min-width:48em){//768px
+    @media(min-width:62em){//992px
         .make-sm-column(6);
         
     }
@@ -213,6 +212,7 @@ blockquote {
 }
 
 .home-cta-row {
+    padding-top:20px;
     @media(min-width:48em){//768px
         .row-eq-height;
         
@@ -220,34 +220,28 @@ blockquote {
 }
 
 .home-ctas {
-    margin:0 auto;
-    padding-top:20px;
-    @media(min-width:48em){//768px
-
-        
-        .make-sm-column(6);
-    }    
-    
-    @media(min-width:62em){//992px
-
-        
-        .make-sm-column(4);
-    } 
-}
-
-.home-ctas-inner {
     background: @brand-yellow;
     padding: 5px 30px;
     border-radius: @border-radius-base;
-    height:100%;
-        @media(min-width:48em){//768px
-    
+    margin:20px auto;
+    padding-top:20px;
+
+    @media(min-width:48em){//768px
+         
+        width:100%; 
+        margin: 0 2%;
+        
          a h3 {
             font-size: 14px;
         }
         
+    }    
+    
+    @media(min-width:62em){//992px
+        
+        width:33%;
 
-    }
+    } 
     
     @media(min-width:75em){//1200px
     
@@ -256,12 +250,12 @@ blockquote {
         }
         
     }
-   
+    
 }
 
 .home-about-row {
     margin-top: 20px;
-    
+    display:inline-flex;
     @media(min-width:48em){//768px
         .row-eq-height;
         
@@ -269,11 +263,11 @@ blockquote {
 }
 
 .home-about {
-    .make-md-column(8);
+    .make-md-column(12);
     background: @brand-orange;
     border-radius: @border-radius-base;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 4px;//fix for flex box
     color: @body-bg;
     
     a {

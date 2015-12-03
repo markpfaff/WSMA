@@ -6909,11 +6909,11 @@ blockquote {
 }
 @media (min-width: 48em) {
   .flexslider-caption {
-    top: 15%;
+    top: 10%;
     right: 10%;
-    padding: 15px 0px 15px 22px;
+    padding: 23px;
     width: 40%;
-    font-size: 24px;
+    font-size: 20px;
     border-radius: 60px;
     background: rgba(0, 0, 0, 0.5);
   }
@@ -6922,7 +6922,7 @@ blockquote {
   .flexslider-caption {
     top: 15%;
     right: 7%;
-    padding: 15px;
+    padding: 30px;
     width: 40%;
     font-size: 30px;
   }
@@ -6962,18 +6962,20 @@ blockquote {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  float: none;
+  clear: both;
 }
 @media (min-width: 768px) {
   .home-youtube {
     float: left;
-    width: 33.33333333%;
+    width: 100%;
   }
 }
 .home-youtube iframe {
   width: 100%;
   height: 300px;
 }
-@media (min-width: 48em) {
+@media (min-width: 62em) {
   .home-youtube {
     position: relative;
     min-height: 1px;
@@ -6981,7 +6983,7 @@ blockquote {
     padding-right: 15px;
   }
 }
-@media (min-width: 48em) and (min-width: 768px) {
+@media (min-width: 62em) and (min-width: 768px) {
   .home-youtube {
     float: left;
     width: 50%;
@@ -6999,6 +7001,9 @@ blockquote {
   clear: both;
   overflow: hidden;
 }
+.home-cta-row {
+  padding-top: 20px;
+}
 @media (min-width: 48em) {
   .home-cta-row {
     display: -webkit-box;
@@ -7008,55 +7013,34 @@ blockquote {
   }
 }
 .home-ctas {
-  margin: 0 auto;
+  background: #ffc629;
+  padding: 5px 30px;
+  border-radius: 4px;
+  margin: 20px auto;
   padding-top: 20px;
 }
 @media (min-width: 48em) {
   .home-ctas {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 100%;
+    margin: 0 2%;
   }
-}
-@media (min-width: 48em) and (min-width: 768px) {
-  .home-ctas {
-    float: left;
-    width: 50%;
+  .home-ctas a h3 {
+    font-size: 14px;
   }
 }
 @media (min-width: 62em) {
   .home-ctas {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-@media (min-width: 62em) and (min-width: 768px) {
-  .home-ctas {
-    float: left;
-    width: 33.33333333%;
-  }
-}
-.home-ctas-inner {
-  background: #ffc629;
-  padding: 5px 30px;
-  border-radius: 4px;
-  height: 100%;
-}
-@media (min-width: 48em) {
-  .home-ctas-inner a h3 {
-    font-size: 14px;
+    width: 33%;
   }
 }
 @media (min-width: 75em) {
-  .home-ctas-inner a h3 {
+  .home-ctas a h3 {
     font-size: 18px;
   }
 }
 .home-about-row {
   margin-top: 20px;
+  display: inline-flex;
 }
 @media (min-width: 48em) {
   .home-about-row {
@@ -7074,13 +7058,13 @@ blockquote {
   background: #f38220;
   border-radius: 4px;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 4px;
   color: #fffdf4;
 }
 @media (min-width: 992px) {
   .home-about {
     float: left;
-    width: 66.66666667%;
+    width: 100%;
   }
 }
 .home-about a {
