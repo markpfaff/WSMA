@@ -9,9 +9,7 @@ Template Name: Individual Class Page
 <!-- content start -->
 <div id="container" class="page">
     <div class="row">
-                    <!-- sidebar -->
-            <?php get_sidebar( 'primary' ); ?>
-            <!-- /sidebar -->
+
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
         <h1 class="col-md-8"><?php the_title(); ?></h1>
@@ -29,6 +27,9 @@ Template Name: Individual Class Page
                 </a>
             </div>
         </article>
+                            <!-- sidebar -->
+            <?php get_sidebar( 'primary' ); ?>
+            <!-- /sidebar -->
         <div class=" col-md-9">
                 <h2>Teachers</h2>
                 <?php $thumbquery = new WP_Query(array( 'name' => 'bobby-bob', 'post_type' => 'teachers' ));

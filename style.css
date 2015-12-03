@@ -6863,14 +6863,21 @@ img {
   max-width: 100%;
   border-radius: 4px;
 }
-img.attachment-medium {
+img.attachment-medium,
+img.attachment-full {
   height: auto;
   width: 100%;
+  max-width: 100% !important;
 }
 @media (min-width: 48em) {
-  img.attachment-medium {
+  img.attachment-medium,
+  img.attachment-full {
     width: auto;
   }
+}
+.home-banner-img {
+  width: 100%;
+  height: auto;
 }
 .entry {
   background: #f38220;
@@ -6895,7 +6902,7 @@ blockquote {
   width: 50%;
   color: #fffdf4;
   font-size: 12px;
-  z-index: 999999;
+  z-index: 999;
 }
 .flexslider-caption a {
   color: #fffdf4;

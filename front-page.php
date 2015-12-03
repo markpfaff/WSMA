@@ -13,19 +13,21 @@
                                     ?>
                                         <?php echo the_content(); ?>
 
+   
+                                </a>
+                            </div>
+                                    <a href="<?php echo the_permalink(); ?>">
+                                        <?php the_post_thumbnail(  'full', array( 'class' => 'home-banner-img' ) ); ?>                                    
+                                    </a>
                                     <?php
                                         endwhile;
                                         wp_reset_postdata();
-                                    ?>       
-                                </a>
-                            </div>
-                            <ul class="slides">
+                                    ?>    
+<!--                            <ul class="slides">
                                 <li>
-                                    <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Enroll' ) ) ); ?>">
-                                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/banner.png" alt="banner image"/>
-                                    </a>
+
                                 </li>
-<!--                                <li>
+                                <li>
                                     <a href="<?php //echo esc_url( get_permalink( get_page_by_title( 'Classes' ) ) ); ?>">
                                         <img src="<?php //echo esc_url( get_template_directory_uri() ); ?>/images/banner2.jpg" alt="banner image"/>
                                     </a>
@@ -34,8 +36,8 @@
                                     <a href="<?php //echo esc_url( get_permalink( get_page_by_title( 'Classes' ) ) ); ?>">
                                         <img src="<?php //echo esc_url( get_template_directory_uri() ); ?>/images/banner3.jpg" alt="banner image"/>
                                     </a>
-                                </li>-->
-                            </ul>
+                                </li>
+                            </ul>-->
 
                         </div><!--/flexslider-->
 

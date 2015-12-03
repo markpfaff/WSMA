@@ -6,11 +6,9 @@ Template Name: Classes Main Page
 <?php get_header(); ?>
 
 <!-- content start -->
-<div id="container" class="page">
+<div  class="container">
     <div class="row">
-        <!-- sidebar -->
-        <?php get_sidebar( 'primary' ); ?>
-        <!-- /sidebar -->
+
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
         <h1 class="col-md-9 page-title"><?php the_title(); ?></h1>
@@ -20,6 +18,7 @@ Template Name: Classes Main Page
         	</div>
         </article>
         <?php endwhile; else:?>
+        
         <article class="page col-md-9 not-found">
             <div class="entry">
                 <p class="lead"><?php _e('Sorry, this page does not exist. Try searching for one.'); ?></p>
@@ -27,6 +26,9 @@ Template Name: Classes Main Page
             </div>
         </article>
         <?php endif; ?>
+                        <!-- sidebar -->
+        <?php get_sidebar( 'primary' ); ?>
+        <!-- /sidebar -->
             <div class="container main-thumb-container">
                 <div class="row">
                     <div class="main-thumb">

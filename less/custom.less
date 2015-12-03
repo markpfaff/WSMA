@@ -72,15 +72,22 @@ img {
     border-radius:@border-radius-base;
 }
 
-img.attachment-medium {
+img.attachment-medium,
+img.attachment-full {
     height: auto;
     width:100%;
+    max-width:100% !important;
     
     @media(min-width:48em){//768px
     width: auto;
                            
     }
     
+}
+
+.home-banner-img {
+    width: 100%;
+    height: auto;
 }
 
 .entry {
@@ -112,7 +119,7 @@ blockquote {
     width: 50%;
     color: @body-bg;
     font-size:@font-size-h6;
-    z-index:999999;
+    z-index:999;
     
     a {
         color: @body-bg;
