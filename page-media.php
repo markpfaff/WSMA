@@ -54,7 +54,7 @@ Template Name: Media Page
                     </a>
                 </div>
 
-                <article class="page col-md-9" id="post-<?php the_ID(); ?>">
+                <article class="media-article" id="post-<?php the_ID(); ?>">
                     <div class="entry">
                     <?php the_content('<p class="serif">More &raquo;</p>'); ?>
                     </div>

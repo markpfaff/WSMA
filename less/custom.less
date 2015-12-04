@@ -174,30 +174,6 @@ blockquote {
     
 }
 
-
-.home-youtube {
-    .make-sm-column(12);
-    float:none;
-    clear:both;
-    iframe {
-        width: 100%;
-        height:300px;                  
-    }
-    
-    @media(min-width:62em){//992px
-        .make-sm-column(6);
-        
-    }
-    
-}
-
-.home-youtube-inner {
-    border-radius: @border-radius-base; 
-
-}
-
-
-
 .clearboth {
     clear:both;
 }
@@ -221,10 +197,9 @@ blockquote {
 
 .home-ctas {
     background: @brand-yellow;
-    padding: 5px 30px;
+        padding: 20px 30px;
     border-radius: @border-radius-base;
     margin:20px auto;
-    padding-top:20px;
 
     @media(min-width:48em){//768px
          
@@ -255,7 +230,6 @@ blockquote {
 
 .home-about-row {
     margin-top: 20px;
-    display:inline-flex;
     @media(min-width:48em){//768px
         .row-eq-height;
         
@@ -263,7 +237,9 @@ blockquote {
 }
 
 .home-about {
-    .make-md-column(12);
+    .make-xs-column(12);
+    clear:both;
+    float:none;
     background: @brand-orange;
     border-radius: @border-radius-base;
     overflow: hidden;
@@ -278,6 +254,27 @@ blockquote {
         .make-sm-column(6);
         
     }
+}
+
+.home-youtube {
+    .make-xs-column(12);
+    float:none;
+    clear:both;
+    iframe {
+        width: 100%;
+        height:300px;                  
+    }
+    
+    @media(min-width:62em){//992px
+        .make-sm-column(6);
+        
+    }
+    
+}
+
+.home-youtube-inner {
+    border-radius: @border-radius-base; 
+
 }
 
 h1 {
@@ -543,10 +540,10 @@ footer {
 
 .logo-footer {
     width:50px;
-    margin-right:10px;
+    
     
     @media(min-width:48em){//768px
-
+    margin-right:10px;
     float:left;
 
     }
@@ -573,7 +570,7 @@ footer {
     
     @media(min-width:48em){//768px
 
-    .make-sm-column(9);
+    .make-sm-column(12);
         
     }
 }
@@ -598,6 +595,18 @@ footer {
     text-align:center;
 }
 
+.media-article {
+    .make-sm-column(12);
+    clear:both;
+    
+    @media(min-width:48em){//768px
+     clear: none;
+    .make-sm-column(9);
+    
+        
+    }  
+}
+
 .page-intro-p {
     color: @body-bg;
     
@@ -615,4 +624,32 @@ footer {
 
 .su-spoiler-style-fancy > .su-spoiler-title {
     background: @brand-bg !important;
+}
+
+/* xs < 768 */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 1.6em;
+    }
+}
+
+/* sm */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 1.6em;
+    }
+}
+
+/* md */
+@media screen and (min-width: 992px) {
+    body {
+        font-size: 1.6em;
+    }
+}
+
+/* lg */
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 1.8em;
+    }
 }
