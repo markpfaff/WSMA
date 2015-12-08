@@ -57,26 +57,30 @@
                     <div class="container">
 
                         <div class="navbar-header col-xs-3 pull-right">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            </button>
-                            <button type="button" class="mobile-toggle navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#search">
-                                <i class="icon-search"></i>
-                            </button>
+                            <a data-toggle="collapse" href=".main-menu-select" aria-expanded="true" aria-controls="collapseOne">
+                                <button type="button" class="navbar-toggle collapsed">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                </button>
+                            </a>
+                            <a data-toggle="collapse" href="#search" aria-expanded="true" aria-controls="collapseTwo">
+                                <button type="button" class="mobile-toggle navbar-toggle collapsed pull-right">
+                                    <i class="icon-search"></i>
+                                </button>
+                            </a>
 
                         </div><!--/navbar-header-->
 
-                        <div class="main-menu-select navbar-collapse collapse">
+                        <div class="main-menu-select navbar-collapse collapse" id="main-menu-select">
                             <ul class="nav navbar-nav">
                                  <?php
                                     wp_nav_menu( array(
                                         'menu'              => 'Primary',                
                                         'depth'             => 2,
                                         'container'         => 'div',
-                                        'container_class'   => 'collapse navbar-collapse',
+                                        'container_class'   => 'collapse navbar-collapse main-menu-select',
                                         'menu_class'        => 'nav navbar-nav',
                                         'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                                         'walker'            => new wp_bootstrap_navwalker())
@@ -85,8 +89,8 @@
                             </ul>
                         </div><!--/.nav-collapse -->
                         <!--start mobile search-->
-                        <div class="collapse navbar-collapse hidden-lg" id="search">
-                            <form class="mobile_search hidden-sm hidden-md hidden-lg" action="<?php bloginfo('siteurl'); ?>/" role="search" action="/" method="GET">
+                        <div class="collapse navbar-collapse hidden-lg search" id="search">
+                            <form class="mobile_search hidden-sm hidden-md hidden-lg" action="<?php bloginfo('siteurl'); ?>/" role="search" method="GET">
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="s" name="s" placeholder="Search" <?php if ( $search_terms !== '' ) { echo ' value="' . $search_terms . '"'; } ?> />
                                     <span class="input-group-btn">

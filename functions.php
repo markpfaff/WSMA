@@ -132,10 +132,15 @@ if (!is_admin()) {
         //20120206 is version number    
         wp_enqueue_script( 'wsma-bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array('jquery'), '20151021', true );
 
+        //Cause hover functionality on desktop view
         wp_enqueue_script( 'wsma-bootstrap-hover-dropdown', get_template_directory_uri() . '/js/bootstrap-hover-dropdown.min.js', array('jquery'), '20151021', true );
      
         //Flexslider scripts
         wp_enqueue_script( 'wsma-flexslider-script', get_template_directory_uri() . '/js/jquery.flexslider.js', array('jquery'), '20151021', true );
+        
+        //mobile menu dropdown switched from hover to on click
+        wp_enqueue_script( 'wsma-mobile-no-hover', get_template_directory_uri() . '/js/no-hover-mobile-dropdown.js', array('jquery'), '20151021', true );
+        
 
     }
 

@@ -282,14 +282,20 @@ h1 {
 }
 
 .navbar-brand {
-    font-size: 24px;
+    font-size: 28px;
     font-family: @font-family-serif;
-    padding-top: 40px;   
+    padding-top: 20px;   
+    
+    @media(min-width:28em){//450px
+    
+        font-size: 36px;
+        padding-top: 40px;
+    }  
     
     @media(min-width:48em){//768px
     
         font-size: 4em;
-
+        
     }
     
     @media(min-width:62em){//992px
@@ -332,6 +338,18 @@ h1 {
 }
 .navbar-static-top {
     clear:both;
+}
+
+.navbar-toggle {
+    margin-top:4px;
+    margin-bottom:4px;
+    
+    @media(min-width:28em){//450px
+    
+        margin-top:8px;
+        margin-bottom:8px;
+
+    }
 }
 
 .small-label {//label for page template
@@ -459,7 +477,9 @@ h1 {
 }
 
 .mobile-toggle {
-    padding: 6.25px 14.5px;
+    
+    padding: 4.5px 14px;
+    
 }
 
 .logo-mobile {
@@ -467,8 +487,21 @@ h1 {
 }
 
 .logo-mobile img {
-    width: 75px;
+    padding: 5px 0px;
+    width: 45px;
     float:left;
+    
+    @media(min-width:22em){//360px
+    
+        width: 65px;
+
+    }
+    @media(min-width:28em){//450px
+    
+        width: 75px;
+        padding-bottom:10px;
+
+    }    
     
 }
 
@@ -652,4 +685,94 @@ footer {
     body {
         font-size: 1.8em;
     }
+}
+
+/*.mobile-caret-container {
+    width:45%;
+    float:right;
+    
+        &:hover {
+        cursor: pointer; 
+        cursor: hand; 
+    }
+    
+    &:after{
+        content:"";
+        clear:both;
+    }
+        
+}*/
+
+.caret {
+    margin-top:18px;
+    border-top: 6px dashed;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    
+        &:hover {
+        cursor: pointer; 
+        cursor: hand; 
+    }
+}
+
+.mobile-dropdown-caret {
+    display:block;
+    font-size:20px;
+    position: absolute;
+    right: 4%;
+    top: 0;
+    z-index: 99999999;
+    
+    @media screen and (min-width: 768px) {
+        
+        display:none;
+    }
+
+}
+
+.show-submenu {
+    
+}
+
+.navbar-collapse .menu-item a {
+    width:90%;
+    border: 1px solid #86B231;
+    @media screen and (min-width: 768px) {
+        
+        width:auto;
+        border:none;
+    }
+}
+
+.dropdown-toggle > .caret {
+    
+    display:none;
+    
+        @media screen and (min-width: 768px) {
+        
+        display:inline-block;
+    }
+}
+
+.caret-border {
+    width:10%;
+    border: 1px solid #86B231;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    
+    &:hover {
+        cursor: pointer; 
+        cursor: hand; 
+    }
+    
+    @media screen and (min-width: 768px) {
+        
+        display:none;
+    }
+}
+
+.dropdown-menu {
+    padding:0px;
 }
