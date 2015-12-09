@@ -6907,6 +6907,9 @@ blockquote {
 .flexslider-caption a {
   color: #fffdf4;
 }
+.flexslider-caption a:hover {
+  text-decoration: none;
+}
 @media (min-width: 48em) {
   .flexslider-caption {
     top: 10%;
@@ -7484,8 +7487,10 @@ footer a {
     }
         
 }*/
-.caret {
+.mobile-dropdown-caret.caret {
   margin-top: 18px;
+}
+.caret {
   border-top: 6px dashed;
   border-right: 6px solid transparent;
   border-left: 6px solid transparent;
@@ -7544,4 +7549,95 @@ footer a {
 }
 .dropdown-menu {
   padding: 0px;
+}
+.page-buttons {
+  width: 90%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .page-buttons {
+    width: 40%;
+  }
+}
+.page-buttons a {
+  margin: 10px 2px;
+  display: block;
+  float: left;
+  width: 48%;
+}
+@media screen and (min-width: 768px) {
+  .page-buttons a {
+    margin: 10px;
+  }
+}
+.page-buttons a button {
+  color: #000;
+  display: inline-block;
+  margin-bottom: 0px;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background: #bd4600;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-radius: 4px;
+  -moz-user-select: none;
+  width: 49%;
+  width: 100%;
+  background-color: #98c93c;
+}
+.page-intro-p > img {
+  width: 100% !important;
+}
+.entry > div.wp-caption {
+  width: 100% !important;
+}
+.classes-teacher-container {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (min-width: 768px) {
+  .classes-teacher-container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .classes-teacher-container {
+    float: left;
+    width: 75%;
+  }
+}
+.teachers-bio-container {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (min-width: 768px) {
+  .teachers-bio-container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .teachers-bio-container {
+    float: left;
+    width: 50%;
+  }
 }

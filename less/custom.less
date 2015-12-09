@@ -123,6 +123,10 @@ blockquote {
     
     a {
         color: @body-bg;
+        
+        &:hover {
+            text-decoration: none;
+        }
 
     }
 
@@ -703,8 +707,12 @@ footer {
         
 }*/
 
-.caret {
+.mobile-dropdown-caret.caret {
     margin-top:18px;
+}
+
+.caret {
+    
     border-top: 6px dashed;
     border-right: 6px solid transparent;
     border-left: 6px solid transparent;
@@ -729,6 +737,11 @@ footer {
     }
 
 }
+
+
+
+
+
 
 .show-submenu {
     
@@ -775,4 +788,60 @@ footer {
 
 .dropdown-menu {
     padding:0px;
+}
+
+.page-buttons {
+    width: 90%;
+    margin:0 auto;
+    
+    
+    @media screen and (min-width: 768px) {
+
+        width: 40%;
+    
+    }
+        
+    a {
+        margin:10px 2px;
+        display: block;
+        float: left;
+        width:48%;
+        
+        @media screen and (min-width: 768px) {
+            margin: 10px;
+        }
+        
+        button {
+            color: #000;
+            .btn-xl;
+            width:100%;
+            background-color:@brand-primary;
+            
+        }
+    }
+}
+
+.page-intro-p > img {
+    width:100% !important;
+}
+
+
+.entry > div.wp-caption {
+    width:100% !important;
+}
+
+
+.classes-teacher-container {
+    .make-xs-column(12);
+    @media screen and (min-width: 768px) {
+        .make-sm-column(9);
+    }
+}
+
+.teachers-bio-container {
+    .make-xs-column(12);
+    
+    @media screen and (min-width: 768px) {
+        .make-sm-column(6);
+    }
 }
