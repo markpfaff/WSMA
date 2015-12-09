@@ -7354,6 +7354,43 @@ footer a {
 @media (min-width: 48em) and (min-width: 768px) {
   .main-thumb-container {
     float: left;
+    width: 75%;
+  }
+}
+.media-thumb-container {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+}
+@media (min-width: 48em) {
+  .media-thumb-container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 48em) and (min-width: 768px) {
+  .media-thumb-container {
+    float: left;
+    width: 75%;
+  }
+}
+@media (min-width: 48em) {
+  .media-thumb-container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 48em) and (min-width: 768px) {
+  .media-thumb-container {
+    float: left;
     width: 100%;
   }
 }
@@ -7589,7 +7626,7 @@ footer a {
 .page-intro-p > img {
   width: 100% !important;
 }
-.entry > div.wp-caption {
+.entry div.wp-caption {
   width: 100% !important;
 }
 .classes-teacher-container {
@@ -7639,4 +7676,9 @@ footer a {
     float: left;
     width: 50%;
   }
+}
+blockquote {
+  background: #fed15d;
+  border-radius: 4px;
+  color: #000;
 }

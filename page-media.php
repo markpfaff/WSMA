@@ -8,7 +8,7 @@ Template Name: Media Page
 
 
 <!-- content start -->
-<div class="container main-thumb-container">
+<div class="container media media-thumb-container">
     <div class="row">
     
         <?php if (have_posts()) : ?>

@@ -39,7 +39,6 @@
                         <?php the_post_thumbnail( 'medium' ); ?>
  
                     </a>
-                    <caption><?php echo the_excerpt(); ?></caption>
                     <?php the_content(); ?>
                     
                 </div>

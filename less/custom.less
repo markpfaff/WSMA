@@ -607,6 +607,15 @@ footer {
     
     @media(min-width:48em){//768px
 
+    .make-sm-column(9);
+        
+    }
+}
+
+.media-thumb-container {
+    .main-thumb-container;
+    @media(min-width:48em){//768px
+
     .make-sm-column(12);
         
     }
@@ -824,7 +833,7 @@ footer {
 }
 
 
-.entry > div.wp-caption {
+.entry div.wp-caption {
     width:100% !important;
 }
 
@@ -851,3 +860,9 @@ footer {
     }
 }
 
+
+blockquote {
+    background: @brand-bg;
+    border-radius:@border-radius-base;
+    color:#000;
+}
