@@ -807,9 +807,7 @@ footer {
         float: left;
         width:48%;
         
-        @media screen and (min-width: 768px) {
-            margin: 10px;
-        }
+
         
         button {
             color: #000;
@@ -843,5 +841,13 @@ footer {
     
     @media screen and (min-width: 768px) {
         .make-sm-column(6);
+        &:nth-child(even) {
+            &:after {
+                content:"";
+                clear:both;
+                
+            }
+        }
     }
 }
+
