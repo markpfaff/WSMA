@@ -7819,3 +7819,8 @@ p.footer-link {
     width: 33.33333333%;
   }
 }
+.ai1ec-agenda-widget-view .ai1ec-date.ai1ec-today,
+.ai1ec-agenda-view .ai1ec-date.ai1ec-today {
+  border-top: none;
+  background: none;
+}
