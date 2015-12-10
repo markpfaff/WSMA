@@ -30,26 +30,7 @@ Template Name: Individual Class Page
             <!-- sidebar -->
             <?php get_sidebar( 'primary' ); ?>
             <!-- /sidebar -->
-        <div class="classes-teacher-container">
-                <h2>Teachers</h2>
-                <?php 
-                $slug = the_slug();
-                
-                $thumbquery = new WP_Query(array( 'field' => $slug, 'post_type' => 'teachers' ));
-                           while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); 
-                  ?>
-                
-                <div class="col-xs-3">
 
-                    <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Teachers' ) ) ); ?>">
-                       <?php the_post_thumbnail( 'medium' ); ?>
- 
-                    </a>
-                    <caption><?php echo the_excerpt(); ?></caption>
-                    
-                </div>
-                <?php endwhile; wp_reset_postdata(); ?> 
-        </div>
     </div><!--/row-->
 </div><!--/container-->   
         
