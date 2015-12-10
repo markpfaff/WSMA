@@ -175,7 +175,7 @@
                                 <?php 
                                     $videoquery = new WP_Query(array( 'name' => 'home-video', 'post_type' => 'page' ));
                                     
-                                    while ( $videoquery->have_posts() ) : $videoequery->the_post();
+                                    while ( $videoquery->have_posts() ) : $videoquery->the_post();
                                 ?>
                                     <?php echo the_content(); ?>
 
