@@ -37,7 +37,7 @@ Template Name: Individual Class Page
                 
                 $thumbquery = new WP_Query(array( 'field' => $slug, 'post_type' => 'teachers' ));
                            while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); 
-                 echo '<pre>'; var_dump($thumbquery); echo '</pre>';                         ?>
+                  ?>
                 
                 <div class="col-xs-3">
 
