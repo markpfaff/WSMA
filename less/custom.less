@@ -276,7 +276,7 @@ blockquote {
     
 }
 
-.home-youtube-inner {
+.home-youtube iframe {
     border-radius: @border-radius-base; 
 
 }
@@ -412,7 +412,7 @@ h1 {
     @media(min-width:75em){//1200px
         
         img {
-            width: 100px;
+            width: 75px;
             height: auto;
             margin-bottom: 20px;
         }
@@ -561,7 +561,7 @@ footer {
     clear:both;
     color:@body-bg;
     background: @brand-red;
-    
+    overflow:hidden;
     a {
         color:@body-bg;
     }
@@ -623,6 +623,7 @@ footer {
 
 .main-thumb {
     .make-xs-column(6);
+    position:relative;
     margin-bottom:20px;
     @media(min-width:48em){//768px
 
@@ -850,7 +851,9 @@ footer {
     
     @media screen and (min-width: 768px) {
         .make-sm-column(6);
+        
         &:nth-child(even) {
+            
             &:after {
                 content:"";
                 clear:both;
@@ -865,4 +868,115 @@ blockquote {
     background: @brand-bg;
     border-radius:@border-radius-base;
     color:#000;
+}
+
+.footer-copyright {
+    ul {
+        width:100%;
+        text-align:center;
+        padding:0px;
+        li {
+            @media screen and (min-width: 768px) {
+                float:left;
+                
+                &.big-li {
+                    width:30%;
+                }
+                &.small-li {
+                    width:20%;
+                }
+                
+            }
+            
+        }
+    }
+}
+
+.icon-facebook {
+    font-size:30px;
+    position:relative;
+    padding-left:20px;
+    a {
+        font-family: sans-serif;
+        color:transparent;
+        position:absolute;
+        top:0;
+        left:0;
+        
+    }
+}
+
+.login-link {
+    padding:5px;
+}
+
+p.footer-link {
+    display:none;
+}
+
+.contact-map {
+    float:right;
+    padding:20px;
+}
+
+.contact-info:extend(.contact-map) {
+    text-align: right;
+}
+
+.wpcf7 {
+    float:left;
+}
+
+.wpcf7-submit {
+    color:#000;
+}
+
+.entry {
+    overflow: hidden;
+}
+
+.ai1ec-main-container > p {//removes redundant calendar title on calendar page
+    display:none;
+}
+
+.news-h1 {
+    padding-left:15px;
+}
+
+.content-404 {
+    width:80%;
+    margin:0 auto;
+}
+
+.entry-404 p {
+    color:@body-bg;
+}
+
+.media-category-title {
+    .h4;
+    position:absolute;
+    padding:5px;
+    bottom:10px;
+    width:50%;
+    border-radius: @border-radius-base;
+    background:@brand-orange;
+    color:@body-bg;
+    text-align:center;
+    
+        @media(min-width:28em){//450px
+        .h3;
+        color:@body-bg;
+        }
+    
+}
+
+.staff-member {
+    .make-xs-column(6);
+    float:left;
+    @media screen and (min-width: 768px) {
+        float:left;
+
+        .make-sm-column(4);
+
+    }
 }

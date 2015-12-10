@@ -29,6 +29,7 @@ Template Name: Media Page
 
                         <?php endwhile; wp_reset_postdata(); ?>      
                     </a>
+                            <span class="media-category-title">Audio</span>
                 </div>
 
                 <div class="main-thumb">
@@ -41,6 +42,7 @@ Template Name: Media Page
 
                         <?php endwhile; wp_reset_postdata(); ?>      
                     </a>
+                    <span class="media-category-title">Photos</span>                    
                 </div>
                 <div class="main-thumb">
                     <?php $thumbquery = new WP_Query(array( 'name' => 'video', 'post_type' => 'page' ));
@@ -52,6 +54,7 @@ Template Name: Media Page
 
                         <?php endwhile; wp_reset_postdata(); ?>      
                     </a>
+                    <span class="media-category-title">Video</span>
                 </div>
 
                 <article class="media-article" id="post-<?php the_ID(); ?>">

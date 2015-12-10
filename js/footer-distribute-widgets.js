@@ -22,14 +22,16 @@
  * THE SOFTWARE.
  */
 
-(function($) {
-    $(".menu-item-has-children").append("<span class=\"caret mobile-dropdown-caret\"></span>" );
-    $(".menu-item").append("<div class=\"caret-border\"></div>");  
-    $(".menu-item-has-children").on("click", ".mobile-dropdown-caret, .caret-border", function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        var $this = $(this);
-        $this.closest(".menu-item-has-children").toggleClass("open");
-    });
-    
-})(jQuery);
+        (function($) {
+            $(window).load(function() {
+            
+                var footer_widgets = $('.row.distribute-widgets > .widget'),
+                widget_count = footer_widgets.length,
+                col_num = Math.floor(12 / widget_count);
+
+                footer_widgets.each(function(index, val) {
+                    $(this).addClass('col-sm-' + col_num);
+                })
+            });
+
+        })(jQuery);

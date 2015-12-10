@@ -22,28 +22,9 @@
             </div>
         </article>
         <?php endif; ?>
-                        	<!-- sidebar -->
+            <!-- sidebar -->
             <?php get_sidebar( 'primary' ); ?>
             <!-- /sidebar -->
-        <div class="classes-teacher-container">
-                <h2>Teachers</h2>
-                <?php $thumbquery = new WP_Query(array('post_type' => 'teachers' ));
-                           while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); 
-                           ?>
-                
-                <div class="teachers-bio-container">
-
-                    <a href="<?php the_permalink; ?>">
-                        <?php  //get_post_thumbnail_id('medium');
-                        //echo '<img width="100%" src="' . $image_src[0] . '">';?>
-                        <?php the_post_thumbnail( 'medium' ); ?>
- 
-                    </a>
-                    <?php the_content(); ?>
-                    
-                </div>
-                <?php endwhile; wp_reset_postdata(); ?> 
-        </div>
 
     </div><!-- /row -->
 </div><!-- /container -->

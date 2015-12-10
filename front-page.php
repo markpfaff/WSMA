@@ -67,12 +67,12 @@
                     <div class="row home-row home-cta-row">
                         <div class="home-ctas">
                                 <?php 
-                                    $newsquery = new WP_Query(array( 'name' => 'news', 'post_type' => 'page' ));
-                                    echo $newsquery->get_the_title();
+                                    $newsquery = new WP_Query(array( 'name' => 'home-latest-news', 'post_type' => 'page' ));
+                                    
                                     while ( $newsquery->have_posts() ) : $newsquery->the_post();
                                 ?>
                                     <h2>Latest News</h2>
-                                    <?php echo the_excerpt(); ?>
+                                    <?php echo the_content(); ?>
 
                                 <?php
                                     endwhile;
@@ -138,27 +138,18 @@
                                 </div><!--/row-->
                         </div>
                         <div class="home-ctas">
-                                <a href="<?php esc_url( get_permalink( get_page_by_title( 'Classes' ) ) ); ?>">
-                                    <h2>Classes</h2>
-                                </a>
+                                <?php 
+                                    $anouncequery = new WP_Query(array( 'name' => 'home-announcements', 'post_type' => 'page' ));
+                                    
+                                    while ( $anouncequery->have_posts() ) : $anouncequery->the_post();
+                                ?>
+                                    <h2>Anouncements:</h2>
+                                    <?php echo the_content(); ?>
 
-                                    <ul>
-                                        <li>
-                                            <a href="<?php esc_url( get_permalink( get_page_by_title( 'Guitar' ) ) ); ?>">
-                                            Guitar Lessons
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="<?php esc_url( get_permalink( get_page_by_title( 'Voice' ) ) ); ?>">
-                                            Voice Lessons
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="<?php esc_url( get_permalink( get_page_by_title( 'Piano' ) ) ); ?>">
-                                            Piano Lessons
-                                            </a>
-                                        </li>
-                                    </ul>
+                                <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                ?>  
                         </div>
                     </div><!--/row-->
                 </div><!--/container--> 
@@ -181,7 +172,17 @@
                         ?>  
                         </div><!--/about text-->
                         <div class="home-youtube"><!--about img-->
-                            <iframe class="home-youtube-inner" src="https://www.youtube.com/embed/a1Y73sPHKxw" frameborder="0" allowfullscreen></iframe>
+                                <?php 
+                                    $videoquery = new WP_Query(array( 'name' => 'home-video', 'post_type' => 'page' ));
+                                    
+                                    while ( $videoquery->have_posts() ) : $videoequery->the_post();
+                                ?>
+                                    <?php echo the_content(); ?>
+
+                                <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                ?>
                         </div><!--/about img-->
                     </div><!--/about-->   
                 </div>

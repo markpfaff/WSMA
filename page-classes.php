@@ -32,16 +32,17 @@ Template Name: Individual Class Page
             <!-- /sidebar -->
         <div class="classes-teacher-container">
                 <h2>Teachers</h2>
-                <?php $thumbquery = new WP_Query(array( 'classes' => 'bass', 'post_type' => 'teachers' ));
+                <?php 
+                $slug = the_slug();
+                
+                $thumbquery = new WP_Query(array( 'field' => $slug, 'post_type' => 'teachers' ));
                            while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); 
-                           ?>
+                 echo '<pre>'; var_dump($thumbquery); echo '</pre>';                         ?>
                 
                 <div class="col-xs-3">
 
-                    <a href="<?php the_permalink; ?>">
-                        <?php  //get_post_thumbnail_id('medium');
-                        //echo '<img width="100%" src="' . $image_src[0] . '">';?>
-                        <?php the_post_thumbnail( 'medium' ); ?>
+                    <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Teachers' ) ) ); ?>">
+                       <?php the_post_thumbnail( 'medium' ); ?>
  
                     </a>
                     <caption><?php echo the_excerpt(); ?></caption>

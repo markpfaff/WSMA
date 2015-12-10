@@ -53,6 +53,18 @@ function my_register_sidebars() {
 			'after_title' => '</h3>'
 		)
 	);
+    
+    register_sidebar(    
+    		array(
+			'id' => 'footer-copyright',
+			'name' => __( 'Footer Copyright' ),
+            'class' => 'footer-copyright',
+			'before_widget' => '<li id="%1$s" class="widget %2$s footer-copyright">',
+			'after_widget' => '</li>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
 
 	/* repeat register_sidebar() code for additional sidebars. */
 }
@@ -132,8 +144,11 @@ if (!is_admin()) {
         //20120206 is version number    
         wp_enqueue_script( 'wsma-bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array('jquery'), '20151021', true );
 
-        //Cause hover functionality on desktop view
+        //add hover functionality on desktop view
         wp_enqueue_script( 'wsma-bootstrap-hover-dropdown', get_template_directory_uri() . '/js/bootstrap-hover-dropdown.min.js', array('jquery'), '20151021', true );
+
+        //add hover functionality on desktop view
+        wp_enqueue_script( 'wsma-footer-distribute-widgets', get_template_directory_uri() . '/js/footer-distribute-widgets.js', array('jquery'), '20151021', true );
      
         //Flexslider scripts
         wp_enqueue_script( 'wsma-flexslider-script', get_template_directory_uri() . '/js/jquery.flexslider.js', array('jquery'), '20151021', true );
@@ -143,7 +158,7 @@ if (!is_admin()) {
         
 
     }
-
+    //add styles before adding scripts hence the order 11 then 12
     add_action( 'wp_enqueue_scripts', 'wsma_styles', 11 );
     add_action( 'wp_enqueue_scripts', 'wsma_scripts', 12 );
     }

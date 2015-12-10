@@ -29,7 +29,9 @@
     <?php while (have_posts()) : the_post(); ?>
     <div class="container">
         <div class="row">
-            <!-- sidebar -->
+
+            <h1 class="news-h1">News</h1>
+                        <!-- sidebar -->
             <?php get_sidebar( 'primary' ); ?>
             <!-- /sidebar -->
             <div class="col-md-9">
