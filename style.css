@@ -6863,6 +6863,9 @@ img {
   max-width: 100%;
   border-radius: 4px;
 }
+a:hover {
+  text-decoration: none;
+}
 img.attachment-medium,
 img.attachment-full {
   height: auto;
@@ -7187,7 +7190,7 @@ h1 {
   display: none;
   background: #ffc629;
   border-radius: 4px;
-  padding: 5px 10px;
+  padding: 15px;
 }
 #sidebar h2 {
   font-family: "amaticbold", "Times New Roman", Times, serif;
@@ -7213,9 +7216,21 @@ h1 {
     width: 25%;
   }
 }
+#sidebar > h2 {
+  margin-top: 0;
+}
 #search {
   float: right;
   clear: both;
+}
+.search-page-form {
+  float: left !important;
+}
+.search-page-form .navbar-form {
+  padding-left: 0px;
+}
+.search-page-title {
+  padding-left: 15px;
 }
 .login-enroll-desktop {
   display: none;
@@ -7731,6 +7746,18 @@ p.footer-link {
 .wpcf7-submit {
   color: #000;
 }
+.wpcf7-form-control.wpcf7-text,
+.wpcf7-form-control.wpcf7-email,
+textarea.wpcf7-form-control {
+  width: 90%;
+}
+@media (min-width: 28em) {
+  .wpcf7-form-control.wpcf7-text,
+  .wpcf7-form-control.wpcf7-email,
+  textarea.wpcf7-form-control {
+    width: auto;
+  }
+}
 .entry {
   overflow: hidden;
 }
@@ -7763,6 +7790,7 @@ p.footer-link {
   background: #f38220;
   color: #fffdf4;
   text-align: center;
+  left: 15px;
 }
 .media-category-title small,
 .media-category-title .small {

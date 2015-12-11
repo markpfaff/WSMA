@@ -2,26 +2,27 @@
 <?php // Get number of results
 $results_count = $wp_query->found_posts;
 ?>
+
+
+<div class="container" id="main">
+        <div class="row">
+            <h1 class="search-page-title">Search <span class="keyword">&ldquo;<?php the_search_query(); ?>&rdquo;</span></h1>
+            <div class="col-md-6">
+                <?php if ($results_count == '' || $results_count == 0) { // No Results ?>
+                    <p><span class="label label-danger"><?php _e('No Results'); ?></span>&nbsp; <?php _e('Try different search terms.'); ?></p>
+                <?php } else { // Results Found ?>
+                    <p><span class="label label-info"><?php echo $results_count . __(' Results'); ?></span></p>
+                <?php } // end results check ?>
+            
+                <div class="search-page-form">
+                    <?php get_search_form(); ?>
+                </div>
+            </div>
+
 <!-- sidebar -->
 <?php get_sidebar(); ?>
 <!-- /sidebar -->
-<div class="jumbotron">
-    <div class="container">
-        <h1>Search <span class="keyword">&ldquo;<?php the_search_query(); ?>&rdquo;</span></h1>
-        <?php if ($results_count == '' || $results_count == 0) { // No Results ?>
-            <p><span class="label label-danger"><?php _e('No Results'); ?></span>&nbsp; <?php _e('Try different search terms.'); ?></p>
-        <?php } else { // Results Found ?>
-            <p><span class="label label-success"><?php echo $results_count . __(' Results'); ?></span></p>
-        <?php } // end results check ?>
-        <div class="row">
-            <div class="col-md-3">
-                <?php get_search_form(); ?>
-            </div>
-        </div>
-    </div> <!-- .container -->
-</div> <!-- .jumbotron -->
-<div class="container" id="main">
-    <div class="row">
+
         <div class="col-md-8">
 
             <?php if (have_posts()) : ?>

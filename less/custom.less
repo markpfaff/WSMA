@@ -72,6 +72,10 @@ img {
     border-radius:@border-radius-base;
 }
 
+a:hover {
+    text-decoration:none;
+}
+
 img.attachment-medium,
 img.attachment-full {
     height: auto;
@@ -424,7 +428,7 @@ h1 {
     display:none;
     background: @brand-yellow;
     border-radius:@border-radius-base;
-    padding: 5px 10px;
+    padding: 15px;
     h2 {
         font-family: @font-family-serif;
         font-size:floor((@font-size-base * 2.6));//36px
@@ -444,10 +448,26 @@ h1 {
     
 }
 
+#sidebar > h2 {
+    margin-top: 0;
+}
+
 #search {
     float:right;
     clear: both;
     
+}
+
+.search-page-form {
+    .pull-left;
+    
+    .navbar-form {
+        padding-left:0px;
+    }
+}
+
+.search-page-title {
+    padding-left:15px;
 }
 
 .login-enroll-desktop {
@@ -931,6 +951,17 @@ p.footer-link {
     color:#000;
 }
 
+.wpcf7-form-control.wpcf7-text,
+.wpcf7-form-control.wpcf7-email,
+textarea.wpcf7-form-control  {
+    width: 90%;
+    @media(min-width:28em){//450px
+        width:auto;
+    }
+}
+
+
+
 .entry {
     overflow: hidden;
 }
@@ -962,7 +993,7 @@ p.footer-link {
     background:@brand-orange;
     color:@body-bg;
     text-align:center;
-    
+    left: 15px;
         @media(min-width:28em){//450px
         .h3;
         color:@body-bg;
@@ -986,3 +1017,5 @@ p.footer-link {
     border-top: none;
     background: none;
 }
+
+

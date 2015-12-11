@@ -24,13 +24,14 @@
 ?>
 <?php get_header(); ?>
 
-    <?php if (have_posts()) : ?>
 
-    <?php while (have_posts()) : the_post(); ?>
     <div class="container">
         <div class="row">
 
             <h1 class="news-h1">News</h1>
+                <?php if (have_posts()) : ?>
+
+                <?php while (have_posts()) : the_post(); ?>
                         <!-- sidebar -->
             <?php get_sidebar( 'primary' ); ?>
             <!-- /sidebar -->
@@ -48,23 +49,16 @@
                 </div>
                 <?php endwhile; ?>
             </div><!-- /col-md-8 -->
+            <?php endif; ?>
 
-                <nav class="post-nav">
-                    <p class="alignleft"><?php next_posts_link('&laquo; Older Posts','1000') ?></p>
-                    <p class="alignright"><?php previous_posts_link('Newer Posts &raquo;','1000') ?></p>
-                </nav>
 
 
         </div><!-- /row -->
     </div><!-- /container -->
-    
-    <!--following divs were added to fix footer width not being 100% -->
-        </div><!-- /row -->
-    </div><!-- /container -->
-</div><!-- /container -->
-    <!--preceding divs were added to fix footer width not being 100% -->
-
-    <?php endif; ?>
+    <nav class="post-nav">
+        <p class="alignleft"><?php next_posts_link('&laquo; Older Posts','1000') ?></p>
+        <p class="alignright"><?php previous_posts_link('Newer Posts &raquo;','1000') ?></p>
+    </nav> 
 
 <small class="small-label">index.php</small>
 <?php get_footer(); ?>
