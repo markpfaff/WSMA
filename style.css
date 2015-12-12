@@ -7335,6 +7335,7 @@ footer a {
   margin: 0 auto 20px auto;
   text-align: center;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 .logo-footer {
   width: 50px;
@@ -7854,4 +7855,11 @@ textarea.wpcf7-form-control {
 .ai1ec-agenda-view .ai1ec-date.ai1ec-today {
   border-top: none;
   background: none;
+}
+a.photoswipe {
+  float: left;
+  width: 30%;
+}
+a.photoswipe .peg-album img {
+  width: 100%;
 }

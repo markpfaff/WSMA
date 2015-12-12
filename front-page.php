@@ -23,21 +23,7 @@
                                         endwhile;
                                         wp_reset_postdata();
                                     ?>    
-<!--                            <ul class="slides">
-                                <li>
 
-                                </li>
-                                <li>
-                                    <a href="<?php //echo esc_url( get_permalink( get_page_by_title( 'Classes' ) ) ); ?>">
-                                        <img src="<?php //echo esc_url( get_template_directory_uri() ); ?>/images/banner2.jpg" alt="banner image"/>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="<?php //echo esc_url( get_permalink( get_page_by_title( 'Classes' ) ) ); ?>">
-                                        <img src="<?php //echo esc_url( get_template_directory_uri() ); ?>/images/banner3.jpg" alt="banner image"/>
-                                    </a>
-                                </li>
-                            </ul>-->
 
                         </div><!--/flexslider-->
 
@@ -82,13 +68,14 @@
                         <div class="home-ctas">
                                 <h2>Latest Media</h2>
                                 <div class="row home-row">
-                                    <a href="<?php esc_url( get_permalink( get_page_by_title( 'Photos' ) ) ); ?>">
-                                        <span class="pull-left latest-thumb">
                                                 <?php 
                                                      $mediaquery = new WP_Query(array( 'name' => 'photos', 'post_type' => 'page' ));
 
                                                      while ( $mediaquery->have_posts() ) : $mediaquery->the_post();
-                                                 ?>
+                                                 ?>                                    
+                                    <a href="<?php esc_url( the_permalink()); ?>">
+                                        <span class="pull-left latest-thumb">
+
                                                  <?php the_post_thumbnail( 'thumbnail' ); ?>
 
                                                  <?php
@@ -101,13 +88,14 @@
                                     </a>
                                 </div><!--/row-->
                                 <div class="row home-row">
-                                    <a href="<?php esc_url( get_permalink( get_page_by_title( 'Video' ) ) ); ?>">
-                                        <span class="pull-left latest-thumb">
                                             <?php 
                                                  $mediaquery = new WP_Query(array( 'name' => 'video', 'post_type' => 'page' ));
 
                                                  while ( $mediaquery->have_posts() ) : $mediaquery->the_post();
                                              ?>
+                                    <a href="<?php esc_url( the_permalink()); ?>">
+                                        <span class="pull-left latest-thumb">
+
                                              <?php the_post_thumbnail( 'thumbnail' ); ?>
 
                                              <?php
@@ -119,13 +107,14 @@
                                     </a>
                                 </div><!--/row-->
                                 <div class="row home-row">
-                                    <a href="<?php esc_url( get_permalink( get_page_by_title( 'Audio' ) ) ); ?>">
-                                        <span class="pull-left latest-thumb">
                                             <?php 
                                                  $mediaquery = new WP_Query(array( 'name' => 'audio', 'post_type' => 'page' ));
 
                                                  while ( $mediaquery->have_posts() ) : $mediaquery->the_post();
                                              ?>
+                                    <a href="<?php esc_url( the_permalink()); ?>">
+                                        <span class="pull-left latest-thumb">
+
                                              <?php the_post_thumbnail( 'thumbnail' ); ?>
 
                                              <?php
