@@ -31,9 +31,19 @@ Template Name: Classes Main Page
         <!-- /sidebar -->
             <div class="container main-thumb-container">
                 <div class="row">
+                    
+                    <?php 
+                    $thumbquery = new WP_Query(//cycle through class pages based on field value
+                            array( 
+                                'post_type'     => 'page' , 
+                                'order' => 'ASC',
+                                'orderby' => 'menu_order',
+                                'posts_per_page' => -1, //this resets the default # blog pages in admin panel
+                                'post_parent'    => $post->ID,
+                            ));
+                            //echo '<pre>';var_dump($thumbquery);echo '</pre>';
+                        while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                     <div class="main-thumb">
-                        <?php $thumbquery = new WP_Query(array( 'name' => 'bass', 'post_type' => 'page' ));
-                               while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
                         
                         <a href="<?php echo the_permalink(); ?>">
 
@@ -42,163 +52,9 @@ Template Name: Classes Main Page
                         </a>
                         
                         <h4 class="thumb-title"><?php the_title(); ?></h4>
-                        <?php endwhile; wp_reset_postdata(); ?> 
+                        
                     </div>
-                    <div class="main-thumb">
-                        <?php $thumbquery = new WP_Query(array( 'name' => 'brass', 'post_type' => 'page' ));
-                               while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
-                        
-                        <a href="<?php the_permalink(); ?>">
-
-                            <?php the_post_thumbnail( 'medium' ); ?>
-
-                        </a>
-                        
-                        <h4 class="thumb-title"><?php the_title(); ?></h4>
-                        <?php endwhile; wp_reset_postdata(); ?> 
-                    </div>
-                    <div class="main-thumb">
-                        <?php $thumbquery = new WP_Query(array( 'name' => 'drums', 'post_type' => 'page' ));
-                               while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
-                        
-                        <a href="<?php the_permalink(); ?>">
-
-                            <?php the_post_thumbnail( 'medium' ); ?>
-
-                        </a>
-                        
-                        <h4 class="thumb-title"><?php the_title(); ?></h4>
-                        <?php endwhile; wp_reset_postdata(); ?> 
-                    </div>
-<!--                </div>/row
-            </div>/container 
-            <div class="container main-thumb-container">
-                <div class="row">-->
-                    <div class="main-thumb">
-                        <?php $thumbquery = new WP_Query(array( 'name' => 'group-classes', 'post_type' => 'page' ));
-                               while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
-                        
-                        <a href="<?php the_permalink(); ?>">
-
-                            <?php the_post_thumbnail( 'medium' ); ?>
-
-                        </a>
-                        
-                        <h4 class="thumb-title"><?php the_title(); ?></h4>
-                        <?php endwhile; wp_reset_postdata(); ?> 
-                    </div>
-                    <div class="main-thumb">
-                        <?php $thumbquery = new WP_Query(array( 'name' => 'guitar', 'post_type' => 'page' ));
-                               while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
-                        
-                        <a href="<?php the_permalink(); ?>">
-
-                            <?php the_post_thumbnail( 'medium' ); ?>
-
-                        </a>
-                        
-                        <h4 class="thumb-title"><?php the_title(); ?></h4>
-                        <?php endwhile; wp_reset_postdata(); ?> 
-                    </div>
-                    <div class="main-thumb">
-                        <?php $thumbquery = new WP_Query(array( 'name' => 'multiple-instruments', 'post_type' => 'page' ));
-                               while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
-                        
-                        <a href="<?php the_permalink(); ?>">
-
-                            <?php the_post_thumbnail( 'medium' ); ?>
-
-                        </a>
-                        
-                        <h4 class="thumb-title"><?php the_title(); ?></h4>
-                        <?php endwhile; wp_reset_postdata(); ?> 
-                    </div>
-               <!--  </div><!--/row-->
-<!--            </div>/container -->
-<!--           <div class="container main-thumb-container">
-                <div class="row">-->
-                    <div class="main-thumb">
-                         <?php $thumbquery = new WP_Query(array( 'name' => 'piano', 'post_type' => 'page' ));
-                               while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
-                        
-                        <a href="<?php the_permalink(); ?>">
-
-                            <?php the_post_thumbnail( 'medium' ); ?>
-
-                        </a>
-                        
-                        <h4 class="thumb-title"><?php the_title(); ?></h4>
-                        <?php endwhile; wp_reset_postdata(); ?> 
-                    </div>
-                    <div class="main-thumb">
-                        <?php $thumbquery = new WP_Query(array( 'name' => 'pianovoice', 'post_type' => 'page' ));
-                               while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
-                        
-                        <a href="<?php the_permalink(); ?>">
-
-                            <?php the_post_thumbnail( 'medium' ); ?>
-
-                        </a>
-                        
-                        <h4 class="thumb-title"><?php the_title(); ?></h4>
-                        <?php endwhile; wp_reset_postdata(); ?> 
-                    </div>
-                    <div class="main-thumb">
-                        <?php $thumbquery = new WP_Query(array( 'name' => 'strings', 'post_type' => 'page' ));
-                               while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
-                        
-                        <a href="<?php the_permalink(); ?>">
-
-                            <?php the_post_thumbnail( 'medium' ); ?>
-
-                        </a>
-                        
-                        <h4 class="thumb-title"><?php the_title(); ?></h4>
-                        <?php endwhile; wp_reset_postdata(); ?> 
-                    </div>
-<!--                </div>/row
-            </div>/container 
-            <div class="container main-thumb-container">
-                <div class="row">-->
-                    <div class="main-thumb">
-                        <?php $thumbquery = new WP_Query(array( 'name' => 'voice', 'post_type' => 'page' ));
-                               while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
-                        
-                        <a href="<?php the_permalink(); ?>">
-
-                            <?php the_post_thumbnail( 'medium' ); ?>
-
-                        </a>
-                        
-                        <h4 class="thumb-title"><?php the_title(); ?></h4>
-                        <?php endwhile; wp_reset_postdata(); ?> 
-                    </div>
-                    <div class="main-thumb">
-                        <?php $thumbquery = new WP_Query(array( 'name' => 'woodwinds', 'post_type' => 'page' ));
-                               while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
-                        
-                        <a href="<?php the_permalink(); ?>">
-
-                            <?php the_post_thumbnail( 'medium' ); ?>
-
-                        </a>
-                        
-                        <h4 class="thumb-title"><?php the_title(); ?></h4>
-                        <?php endwhile; wp_reset_postdata(); ?> 
-                    </div>
-                    <div class="main-thumb">
-                        <?php $thumbquery = new WP_Query(array( 'name' => 'misc', 'post_type' => 'page' ));
-                               while ( $thumbquery->have_posts() ) : $thumbquery->the_post(); ?>
-                        
-                        <a href="<?php the_permalink(); ?>">
-
-                            <?php the_post_thumbnail( 'medium' ); ?>
-
-                        </a>
-                        
-                        <h4 class="thumb-title"><?php the_title(); ?></h4>
-                        <?php endwhile; wp_reset_postdata(); ?> 
-                    </div>
+                    <?php endwhile; wp_reset_postdata(); ?> 
 
                 </div><!--/row-->
             </div><!--/container--> 
@@ -206,6 +62,6 @@ Template Name: Classes Main Page
     </div><!-- /row -->
 </div><!-- /container -->
 
-<small class="small-label">page-class-main.php</small>
+<!--<small class="small-label">page-class-main.php</small>-->
 
 <?php get_footer(); ?>

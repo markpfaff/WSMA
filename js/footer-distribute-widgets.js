@@ -23,7 +23,7 @@
  */
 
         (function($) {
-            $(window).load(function() {
+            $(document).ready(function() {
             
                 var footer_widgets = $('.row.distribute-widgets > .widget'),
                 widget_count = footer_widgets.length,

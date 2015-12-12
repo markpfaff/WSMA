@@ -19,10 +19,10 @@ Template Name: Individual Class Page
             <?php the_content('<p class="serif">More &raquo;</p>'); ?>
         	</div>
             <div class="page-buttons">
-                <a href="<?php echo get_page_link( get_page_by_title( 'enroll' )->ID ); ?>">
+                <a href="<?php echo esc_url(get_page_link( get_page_by_title( 'Enroll' )->ID )); ?>">
                     <button type="button" class="btn btn-info btn-lg">Enroll</button>
                 </a>
-                <a href="<?php echo get_page_link( get_page_by_title( 'resources' )->ID ); ?>">
+                <a href="<?php echo esc_url(get_page_link( get_page_by_title( 'Resources & Policies' )->ID )); ?>">
                     <button type="button" class="btn btn-info btn-lg">Policies</button>
                 </a>
             </div>
@@ -46,7 +46,7 @@ Template Name: Individual Class Page
 
 </div><!-- /container -->
 
-<small class="small-label">page-classes1.php</small>
+<!--<small class="small-label">page-classes1.php</small>-->
 
 <?php get_footer(); ?>
 

@@ -21,6 +21,6 @@
     </div><!-- /row -->
 </div><!-- /container -->
 
-<small class="small-label">404.php</small>
+<!--<small class="small-label">404.php</small>-->
 
 <?php get_footer(); ?>

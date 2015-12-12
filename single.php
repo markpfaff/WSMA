@@ -17,24 +17,19 @@
 
                     </div> <!-- /col-md-8 -->
                       <?php get_sidebar(); ?>
+                 
                         <?php endwhile;?> 
-                    <ul class="pull-left">
-                        <li class="pull-left">
-                             <?php previous_posts_link(); ?>
-                        </li>
-                        <li class="pull-left">
-                             <?php next_posts_link(); ?>
-                        </li>
-                    </ul>     
+    
                         <?php endif; ?>
-
-  
-
+                    
+                    <?php if ( get_post_type() == 'ai1ec_event' ) {}else{
+echo '<div class="single-back-link"> <a href="' . esc_url( get_permalink( get_page_by_title( 'news' ))) . '"><< Back to News </a></div>';
+}?>
                 </div> <!-- /row -->
             </div> <!-- /container -->
 
 
 
-<small class="small-label">single.php</small>
+<!--<small class="small-label">single.php</small>-->
 
 <?php get_footer(); ?>

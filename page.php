@@ -28,6 +28,6 @@
     </div><!-- /row -->
 </div><!-- /container -->
 
-<small class="small-label">page.php</small>
+<!--<small class="small-label">page.php</small>-->
 
 <?php get_footer(); ?>

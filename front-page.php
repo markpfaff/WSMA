@@ -42,7 +42,7 @@
                                 ?>  
                             </div>
                             <div class="flexslider-button">
-                                <a href="<?php echo get_page_link( get_page_by_title( 'about' )->ID ); ?>">
+                                <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'about' ))); ?>">
                                     <button type="button" class="btn btn-info btn-block">See More</button>
                                 </a>
                             </div>
@@ -176,7 +176,7 @@
                     </div><!--/about-->   
                 </div>
             </div>
-<small class="small-label">front-page.php</small>
+<!--<small class="small-label">front-page.php</small>-->
 
 
 <?php get_footer(); ?>

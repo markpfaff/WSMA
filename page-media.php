@@ -79,6 +79,6 @@ Template Name: Media Page
     </div><!-- /row -->
 </div><!-- /container -->
 
-<small class="small-label">page-media.php</small>
+<!--<small class="small-label">page-media.php</small>-->
 
 <?php get_footer(); ?>

@@ -13,6 +13,8 @@ Plugins Used (Plugin settings can be configured in Admin Panel):
         
         Adding New Events: Admin Panel Sidebar > Events > Add New
 
+    Breadcrumb NavXT By John Havlik - https://wordpress.org/plugins/breadcrumb-navxt/
+    
     Easy Testimonials by Gold Plugins - https://wordpress.org/plugins/easy-testimonials/
         Settings: Admin Panel Sidebar > Easy Testimonials Settings
         
@@ -25,9 +27,33 @@ Plugins Used (Plugin settings can be configured in Admin Panel):
     
         Adding New Form:  Admin Panel Sidebar > Contact > Add New
 
+    Photo Express for Google -  https://wordpress.org/plugins/photo-express-for-google/
+        Settings: Admin Panel Sidebar > Settings > Photo Express for Google
+
+        Adding New Gallery: Admin Panel Sidebar > Settings > Slickr Flickr > 
+                        Extras Section > Click on “How to Use the Plugin”
+
     Really Simple CAPTCHA by Takayuki Miyoshi -  https://wordpress.org/plugins/really-simple-captcha/
         Settings: Note: This is setup WITHIN the Contact Form 7 Plugin. 
                   Admin Panel Sidebar > Contact > Integration > Configure Keys > Enter a Site Key and Secret Key > Save
+
+    Shortcodes Ultimate by By Vladimir Anokhin - http://gndev.info/shortcodes-ultimate/
+        Adding Accordian to page: Add the following shortcode directly into editor and replace section title and section content
+
+            [su_accordion]
+              [su_spoiler title="Section Title" style="fancy"] Section Content [/su_spoiler]
+            [/su_accordion]
+            
+
+    Simple Staff List by Brett Shumaker  - https://wordpress.org/plugins/simple-staff-list/
+        Settings: Admin Panel Sidebar > Staff Members > Settings
+        To add list of all staff to page add [simple-staff-list] into the editor
+        To add a list of staff that belong to a group add [simple-staff-list group="group"] into the editor and replace "group" with group name
+
+    SoundCloud ShortCode by SoundCloud - https://wordpress.org/plugins/soundcloud-shortcode/
+        Adding New SoundCloud to page: insert the following shortcode directly into editor:
+                        [soundcloud]http://soundcloud.com/username/songtitle[/soundcloud]
+            replace 'username' and 'songtitle' with your username and song title
 
     YouTube Embed Plugin by embedplus -  https://wordpress.org/plugins/youtube-embed-plus/
         Settings: Admin Panel Sidebar > YouTube Free > Settings are displayed on its main page
@@ -35,21 +61,6 @@ Plugins Used (Plugin settings can be configured in Admin Panel):
         Adding New Form:  Note: Consult the documentation on the plugins main page
                       Admin Panel Sidebar > YouTube Free
 
-
-    SoundCloud Master by TechGasp - https://wordpress.org/plugins/soundcloud-master/
-        Settings: Note: You must add a SoundCloud Master Widget before you can configure it
-                  Admin Panel Sidebar > Appearance > Widgets > Select SoundCloud Widget you’d like to configure
-
-        Adding New SoundCloud Widget: Admin Panel Sidebar > SoundCloud Master > 
-                                  SoundCloud Master Documentation (At bottom of page) > 
-                                  Select and configure widget you’d like to add > 
-                                    Press “Back to WP Admin Panel”
-
-    Slickr Flickr by Russell Jamieson -  https://wordpress.org/plugins/slickr-flickr/
-        Settings: Admin Panel Sidebar > Settings > Slickr Flickr
-
-        Adding New Gallery: Admin Panel Sidebar > Settings > Slickr Flickr > 
-                        Extras Section > Click on “How to Use the Plugin”
 */
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
@@ -1226,7 +1237,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
+  font-family: "amaticbold", "Times New Roman", Times, serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -1311,11 +1322,11 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 30px;
+  font-size: 44px;
 }
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 31px;
 }
 h4,
 .h4 {
@@ -3655,10 +3666,10 @@ tbody.collapse.in {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   outline: 0;
-  background-color: #98c93c;
+  background-color: #87b432;
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -4179,8 +4190,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: #ffffff;
-  background-color: #98c93c;
+  color: #000000;
+  background-color: #87b432;
 }
 .nav-stacked > li {
   float: none;
@@ -5372,9 +5383,9 @@ button.list-group-item {
 .list-group-item.active:hover,
 .list-group-item.active:focus {
   z-index: 2;
-  color: #ffffff;
-  background-color: #98c93c;
-  border-color: #98c93c;
+  color: #000000;
+  background-color: #87b432;
+  border-color: #87b432;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading,
@@ -5390,7 +5401,7 @@ button.list-group-item {
 .list-group-item.active .list-group-item-text,
 .list-group-item.active:hover .list-group-item-text,
 .list-group-item.active:focus .list-group-item-text {
-  color: #ecf5dc;
+  color: #e0efc4;
 }
 .list-group-item-success {
   color: #3c763d;
@@ -6931,7 +6942,7 @@ blockquote {
     right: 7%;
     padding: 30px;
     width: 40%;
-    font-size: 30px;
+    font-size: 44px;
   }
 }
 .flexslider .slides img {
@@ -7083,9 +7094,6 @@ blockquote {
 .home-youtube iframe {
   border-radius: 4px;
 }
-h1 {
-  font-family: "amaticbold", "Times New Roman", Times, serif;
-}
 .navbar-brand {
   font-size: 28px;
   font-family: "amaticbold", "Times New Roman", Times, serif;
@@ -7153,6 +7161,9 @@ h1 {
 .header-buttons a {
   margin-top: 10px;
   color: #fffdf4;
+}
+.header-buttons a:hover {
+  text-decoration: none;
 }
 @media (min-width: 48em) {
   .header-buttons a {
@@ -7241,6 +7252,10 @@ h1 {
 @media (min-width: 48em) {
   .login-enroll-desktop {
     display: block;
+  }
+  .login-enroll-desktop .btn-info,
+  .login-enroll-desktop .btn-primary {
+    color: #000;
   }
 }
 .btn-xl {
@@ -7512,7 +7527,7 @@ footer a {
   }
 }
 /* sm */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   body {
     font-size: 1.6em;
   }
@@ -7564,7 +7579,7 @@ footer a {
   top: 0;
   z-index: 99999999;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .mobile-dropdown-caret {
     display: none;
   }
@@ -7573,7 +7588,7 @@ footer a {
   width: 90%;
   border: 1px solid #86B231;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .navbar-collapse .menu-item a {
     width: auto;
     border: none;
@@ -7582,7 +7597,7 @@ footer a {
 .dropdown-toggle > .caret {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .dropdown-toggle > .caret {
     display: inline-block;
   }
@@ -7599,7 +7614,7 @@ footer a {
   cursor: pointer;
   cursor: hand;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .caret-border {
     display: none;
   }
@@ -7611,7 +7626,7 @@ footer a {
   width: 90%;
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .page-buttons {
     width: 40%;
   }
@@ -7657,7 +7672,7 @@ footer a {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .classes-teacher-container {
     position: relative;
     min-height: 1px;
@@ -7665,7 +7680,7 @@ footer a {
     padding-right: 15px;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 768px) {
+@media screen and (min-width: 48em) and (min-width: 768px) {
   .classes-teacher-container {
     float: left;
     width: 75%;
@@ -7679,7 +7694,7 @@ footer a {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .teachers-bio-container {
     position: relative;
     min-height: 1px;
@@ -7691,7 +7706,7 @@ footer a {
     clear: both;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 768px) {
+@media screen and (min-width: 48em) and (min-width: 768px) {
   .teachers-bio-container {
     float: left;
     width: 50%;
@@ -7707,7 +7722,7 @@ blockquote {
   text-align: center;
   padding: 0px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .footer-copyright ul li {
     float: left;
   }
@@ -7754,6 +7769,7 @@ p.footer-link {
 .wpcf7-form-control.wpcf7-email,
 textarea.wpcf7-form-control {
   width: 90%;
+  color: #000;
 }
 @media (min-width: 28em) {
   .wpcf7-form-control.wpcf7-text,
@@ -7761,6 +7777,9 @@ textarea.wpcf7-form-control {
   textarea.wpcf7-form-control {
     width: auto;
   }
+}
+.wpcf7-form-control {
+  color: #000;
 }
 .entry {
   overflow: hidden;
@@ -7779,7 +7798,7 @@ textarea.wpcf7-form-control {
   color: #fffdf4;
 }
 .media-category-title {
-  font-family: inherit;
+  font-family: "amaticbold", "Times New Roman", Times, serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -7808,13 +7827,13 @@ textarea.wpcf7-form-control {
 }
 @media (min-width: 28em) {
   .media-category-title {
-    font-family: inherit;
+    font-family: "amaticbold", "Times New Roman", Times, serif;
     font-weight: 500;
     line-height: 1.1;
     color: inherit;
     margin-top: 20px;
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 31px;
     color: #fffdf4;
   }
   .media-category-title small,
@@ -7836,7 +7855,7 @@ textarea.wpcf7-form-control {
   padding-right: 15px;
   float: left;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .staff-member {
     float: left;
     position: relative;
@@ -7845,7 +7864,7 @@ textarea.wpcf7-form-control {
     padding-right: 15px;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 768px) {
+@media screen and (min-width: 48em) and (min-width: 768px) {
   .staff-member {
     float: left;
     width: 33.33333333%;
@@ -7858,11 +7877,44 @@ textarea.wpcf7-form-control {
 }
 .peg-album a.photoswipe {
   float: left;
-  width: 15%;
+  width: 30%;
+}
+@media (min-width: 28em) {
+  .peg-album a.photoswipe {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 48em) {
+  .peg-album a.photoswipe {
+    width: 15%;
+  }
 }
 .peg-album img {
   width: 100%;
 }
 .peg-album {
   width: 100%;
+}
+.blog-pager {
+  float: left !important;
+  clear: both;
+  padding: 0;
+}
+.blog-pager li {
+  display: inline;
+}
+.single-back-link {
+  margin: 15px;
+  float: left !important;
+  clear: both;
+  padding: 0;
+}
+.single-back-link li {
+  display: inline;
+}
+ul#menu-footer6 li {
+  margin-bottom: 10px;
+}
+.all-main-containers {
+  margin-bottom: 20px;
 }

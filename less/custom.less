@@ -286,10 +286,6 @@ blockquote {
 
 }
 
-h1 {
-    font-family: @font-family-serif;
-}
-
 .navbar-brand {
     font-size: 28px;
     font-family: @font-family-serif;
@@ -377,6 +373,10 @@ h1 {
 
     margin-top:10px;
     color:@body-bg;
+    
+    &:hover {
+        text-decoration:none;
+    }
 
     @media(min-width:48em){//768px
             float:right;
@@ -479,6 +479,11 @@ h1 {
     @media(min-width:48em){//768px
                            
          display:block;
+         
+         .btn-info,
+         .btn-primary {
+             color:#000;
+         }
         
     }
 }
@@ -705,7 +710,7 @@ footer {
 }
 
 /* sm */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em){//768px
     body {
         font-size: 1.6em;
     }
@@ -765,7 +770,7 @@ footer {
     top: 0;
     z-index: 99999999;
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48em){//768px
         
         display:none;
     }
@@ -784,7 +789,7 @@ footer {
 .navbar-collapse .menu-item a {
     width:90%;
     border: 1px solid #86B231;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48em){//768px
         
         width:auto;
         border:none;
@@ -795,7 +800,7 @@ footer {
     
     display:none;
     
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width:48em){//768px
         
         display:inline-block;
     }
@@ -814,7 +819,7 @@ footer {
         cursor: hand; 
     }
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width:48em){//768px
         
         display:none;
     }
@@ -829,7 +834,7 @@ footer {
     margin:0 auto;
     
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width:48em){//768px
 
         width: 40%;
     
@@ -865,7 +870,7 @@ footer {
 
 .classes-teacher-container {
     .make-xs-column(12);
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width:48em){//768px
         .make-sm-column(9);
     }
 }
@@ -873,7 +878,7 @@ footer {
 .teachers-bio-container {
     .make-xs-column(12);
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width:48em){//768px
         .make-sm-column(6);
         
         &:nth-child(even) {
@@ -900,7 +905,7 @@ blockquote {
         text-align:center;
         padding:0px;
         li {
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width:48em){//768px
                 float:left;
                 
                 &.big-li {
@@ -959,12 +964,15 @@ p.footer-link {
 .wpcf7-form-control.wpcf7-email,
 textarea.wpcf7-form-control  {
     width: 90%;
+    color:#000;
     @media(min-width:28em){//450px
         width:auto;
     }
 }
 
-
+.wpcf7-form-control {
+        color:#000;
+}
 
 .entry {
     overflow: hidden;
@@ -999,17 +1007,18 @@ textarea.wpcf7-form-control  {
     color:@body-bg;
     text-align:center;
     left: 15px;
-        @media(min-width:28em){//450px
-        .h3;
-        color:@body-bg;
-        }
+    
+    @media(min-width:28em){//450px
+    .h3;
+    color:@body-bg;
+    }
     
 }
 
 .staff-member {
     .make-xs-column(6);
     float:left;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width:48em){//768px
         float:left;
 
         .make-sm-column(4);
@@ -1025,8 +1034,15 @@ textarea.wpcf7-form-control  {
 
 .peg-album a.photoswipe {
     float: left;
-    width: 15%;
+    width:30%;
     
+    @media(min-width:28em){//450px
+    width:20%;
+    }    
+    
+    @media screen and (min-width:48em){//768px
+    width: 15%;
+    }
 }
 
 .peg-album img {
@@ -1035,4 +1051,29 @@ textarea.wpcf7-form-control  {
 
 .peg-album {
     width: 100%;
+}
+
+.blog-pager {
+    .pull-left;
+    clear:both;
+    padding: 0;
+    
+    li {
+        display:inline;
+    }
+}
+
+.single-back-link {
+    margin: 15px;
+    .blog-pager;
+}
+
+ul#menu-footer6 {
+    li {
+            margin-bottom: 10px;
+        }
+}
+
+.all-main-containers {
+    margin-bottom: 20px;
 }

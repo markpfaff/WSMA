@@ -46,7 +46,6 @@ $results_count = $wp_query->found_posts;
 
             <?php else : ?>
                 <h2>No posts found. Try a different search?</h2>
-                <?php get_search_form(); ?>
 
             <?php endif; ?>
 		
@@ -54,6 +53,6 @@ $results_count = $wp_query->found_posts;
     </div><!-- /row-->
 </div><!-- /container-->
 
-<small class="small-label">search.php</small>
+<!--<small class="small-label">search.php</small>-->
 
 <?php get_footer(); ?>

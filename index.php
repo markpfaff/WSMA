@@ -47,17 +47,21 @@
                 <?php edit_post_link('Edit this entry.', '<p><small>', '</small></p>'); ?>
                 
                 <?php endwhile; ?>
+                
+                    <ul class="blog-pager">
+                        <li>
+                             <?php //echo get_next_posts_link( 'Older Entries' ); ?>
+                            <?php previous_posts_link('<strong> &laquo; Previous Page</strong>'); ?>
+                        </li>
+                        <li>
+                             <?php next_posts_link('<strong> Next Page &raquo; </strong>'); ?>
+                            <?php //echo get_previous_posts_link( 'Newer Entries' );?>
+                        </li>
+                    </ul>  
+                
                 </div>
             </div><!-- /col-sm-9 -->
-                    <ul class="pull-left">
-                        <li class="pull-left">
-                             <?php echo get_next_posts_link( 'Older Entries' ); ?>
-                        </li>
-                        <li class="pull-left">
-                             
-                            <?php echo get_previous_posts_link( 'Newer Entries' );?>
-                        </li>
-                    </ul>    
+  
             <?php endif; ?>
 
 
@@ -65,5 +69,5 @@
         </div><!-- /row -->
     </div><!-- /container -->
 
-<small class="small-label">index.php</small>
+<!--<small class="small-label">index.php</small>-->
 <?php get_footer(); ?>
