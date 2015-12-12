@@ -7856,7 +7856,7 @@ textarea.wpcf7-form-control {
   border-top: none;
   background: none;
 }
-a.photoswipe {
+.peg-album a.photoswipe {
   float: left;
   width: 15%;
 }
