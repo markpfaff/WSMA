@@ -22,7 +22,7 @@ Template Name: Individual Class Page
                 <a href="<?php echo get_page_link( get_page_by_title( 'enroll' )->ID ); ?>">
                     <button type="button" class="btn btn-info btn-lg">Enroll</button>
                 </a>
-                <a href="<?php echo get_page_link( get_page_by_title( 'policies' )->ID ); ?>">
+                <a href="<?php echo get_page_link( get_page_by_title( 'resources' )->ID ); ?>">
                     <button type="button" class="btn btn-info btn-lg">Policies</button>
                 </a>
             </div>

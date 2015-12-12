@@ -29,36 +29,41 @@
         <div class="row">
 
             <h1 class="news-h1">News</h1>
-                <?php if (have_posts()) : ?>
 
-                <?php while (have_posts()) : the_post(); ?>
-                        <!-- sidebar -->
+            <!-- sidebar -->
             <?php get_sidebar( 'primary' ); ?>
             <!-- /sidebar -->
-            <div class="col-md-9">
+            <div class="col-sm-9">
                 <div class="post-box">
+                                    <?php if (have_posts()) : ?>
+
+                <?php while (have_posts()) : the_post(); ?>
                 <h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
                 <p class="postmetadata">
                     <span class="date">Posted on <?php the_time('F jS, Y') ?></span> in
                     <span class="cat"><?php the_category(', ') ?></span>
-                    <span class="author">by <?php the_author_posts_link(); ?></span>
-                    <span class="comments">with <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></span>
                 </p>
                 <?php the_content('More &raquo;'); ?>
                 <?php edit_post_link('Edit this entry.', '<p><small>', '</small></p>'); ?>
-                </div>
+                
                 <?php endwhile; ?>
-            </div><!-- /col-md-8 -->
+                </div>
+            </div><!-- /col-sm-9 -->
+                    <ul class="pull-left">
+                        <li class="pull-left">
+                             <?php echo get_next_posts_link( 'Older Entries' ); ?>
+                        </li>
+                        <li class="pull-left">
+                             
+                            <?php echo get_previous_posts_link( 'Newer Entries' );?>
+                        </li>
+                    </ul>    
             <?php endif; ?>
 
 
 
         </div><!-- /row -->
     </div><!-- /container -->
-    <nav class="post-nav">
-        <p class="alignleft"><?php next_posts_link('&laquo; Older Posts','1000') ?></p>
-        <p class="alignright"><?php previous_posts_link('Newer Posts &raquo;','1000') ?></p>
-    </nav> 
 
 <small class="small-label">index.php</small>
 <?php get_footer(); ?>

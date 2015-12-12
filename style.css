@@ -6863,9 +6863,6 @@ img {
   max-width: 100%;
   border-radius: 4px;
 }
-a:hover {
-  text-decoration: none;
-}
 img.attachment-medium,
 img.attachment-full {
   height: auto;
@@ -6885,7 +6882,11 @@ img.attachment-full {
 .entry {
   background: #f38220;
   border-radius: 4px;
-  padding: 10px;
+  padding: 15px;
+  color: #fffdf4;
+}
+.entry a {
+  color: #fffdf4;
 }
 li {
   list-style-type: none;
@@ -7229,7 +7230,9 @@ h1 {
 .search-page-form .navbar-form {
   padding-left: 0px;
 }
-.search-page-title {
+.search-page-title,
+.news-h1,
+.single-h1 {
   padding-left: 15px;
 }
 .login-enroll-desktop {
@@ -7764,8 +7767,8 @@ textarea.wpcf7-form-control {
 .ai1ec-main-container > p {
   display: none;
 }
-.news-h1 {
-  padding-left: 15px;
+.ai1ec-date a.ai1ec-load-view {
+  color: #000;
 }
 .content-404 {
   width: 80%;

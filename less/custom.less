@@ -72,9 +72,6 @@ img {
     border-radius:@border-radius-base;
 }
 
-a:hover {
-    text-decoration:none;
-}
 
 img.attachment-medium,
 img.attachment-full {
@@ -97,8 +94,12 @@ img.attachment-full {
 .entry {
     background:@brand-orange;
     border-radius: @border-radius-base;
-    padding: 10px;
+    padding: 15px;
+    color: @body-bg;
     
+    a {
+        color: @body-bg;
+    }
 }
 
 li {
@@ -466,7 +467,9 @@ h1 {
     }
 }
 
-.search-page-title {
+.search-page-title,
+.news-h1,
+.single-h1 {
     padding-left:15px;
 }
 
@@ -970,9 +973,10 @@ textarea.wpcf7-form-control  {
     display:none;
 }
 
-.news-h1 {
-    padding-left:15px;
+.ai1ec-date a.ai1ec-load-view {//changes dates to black on month calendar view
+    color:#000;
 }
+
 
 .content-404 {
     width:80%;
