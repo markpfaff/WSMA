@@ -7860,6 +7860,6 @@ a.photoswipe {
   float: left;
   width: 30%;
 }
-a.photoswipe .peg-album img {
+.peg-album img {
   width: 100%;
 }
