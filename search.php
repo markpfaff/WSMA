@@ -23,7 +23,7 @@ $results_count = $wp_query->found_posts;
 <?php get_sidebar(); ?>
 <!-- /sidebar -->
 
-        <div class="col-md-8">
+        <div class="search-results-container">
 
             <?php if (have_posts()) : ?>
                 <h2 class="pagetitle">Search Results</h2>
@@ -45,7 +45,7 @@ $results_count = $wp_query->found_posts;
             <?php endwhile; ?>
 
             <?php else : ?>
-                <h2>No posts found. Try a different search?</h2>
+                <h2 class="no-posts">No posts found. Try a different search?</h2>
 
             <?php endif; ?>
 		

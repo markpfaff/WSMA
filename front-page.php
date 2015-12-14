@@ -2,33 +2,35 @@
 
                 <div class="container">
                     <div class="row home-row">
-                        <div class="flexslider col-xsm-12">
-                            <div class="flexslider-caption">
-                                <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Enroll' ) ) ); ?>">
-                                    
-                                    <?php 
-                                        $captionquery = new WP_Query(array( 'name' => 'home', 'post_type' => 'page' ));
-                                        //echo $captionquery->get_the_title();
-                                        while ( $captionquery->have_posts() ) : $captionquery->the_post();
-                                    ?>
-                                        <?php echo the_content(); ?>
+                        <div class="home-banner">
+                            <?php 
+                                $captionquery = new WP_Query(array( 'name' => 'home', 'post_type' => 'page' ));
+                                //echo $captionquery->get_the_title();
+                                while ( $captionquery->have_posts() ) : $captionquery->the_post();
+                            ?>
+                            <a href="<?php echo the_permalink(); ?>">
+                                <?php the_post_thumbnail(  'full', array( 'class' => 'home-banner-img' ) ); ?>                                    
+                            </a>
+                            <?php
+                                endwhile;
+                                wp_reset_postdata();
+                            ?>    
 
-   
-                                </a>
-                            </div>
-                                    <a href="<?php echo the_permalink(); ?>">
-                                        <?php the_post_thumbnail(  'full', array( 'class' => 'home-banner-img' ) ); ?>                                    
+                            <div class="home-banner-caption">
+                                <div class="home-banner-caption-inner">
+                                    <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Enroll' ) ) ); ?>">
+
+
+                                            <?php echo the_content(); ?>
+
+
                                     </a>
-                                    <?php
-                                        endwhile;
-                                        wp_reset_postdata();
-                                    ?>    
+                                </div><!--/home-banner caption inner-->
+                            </div><!--/home-banner caption-->
+                        </div><!--/home-banner-->
 
-
-                        </div><!--/flexslider-->
-
-                        <div class="flexslider-bottom-caption">
-                            <div class="flexslider-bottom-caption-inner">
+                        <div class="home-banner-bottom-caption">
+                            <div class="home-banner-bottom-caption-inner">
                                 <?php 
                                     $captionquery = new WP_Query(array( 'name' => 'home', 'post_type' => 'page' ));
                                     //echo $captionquery->get_the_title();
@@ -41,14 +43,13 @@
                                     wp_reset_postdata();
                                 ?>  
                             </div>
-                            <div class="flexslider-button">
+                            <div class="home-banner-button">
                                 <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'about' ))); ?>">
                                     <button type="button" class="btn btn-info btn-block">See More</button>
                                 </a>
                             </div>
                         </div>
                     </div><!--/row-->
-                </div><!--/container-->                 
                 <div class="container">
                     <div class="row home-row home-cta-row">
                         <div class="home-ctas">
@@ -74,7 +75,7 @@
                                                      while ( $mediaquery->have_posts() ) : $mediaquery->the_post();
                                                  ?>                                    
                                     <a href="<?php esc_url( the_permalink()); ?>">
-                                        <span class="pull-left latest-thumb">
+                                        <span class="latest-thumb">
 
                                                  <?php the_post_thumbnail( 'thumbnail' ); ?>
 
@@ -94,7 +95,7 @@
                                                  while ( $mediaquery->have_posts() ) : $mediaquery->the_post();
                                              ?>
                                     <a href="<?php esc_url( the_permalink()); ?>">
-                                        <span class="pull-left latest-thumb">
+                                        <span class="latest-thumb">
 
                                              <?php the_post_thumbnail( 'thumbnail' ); ?>
 
@@ -113,7 +114,7 @@
                                                  while ( $mediaquery->have_posts() ) : $mediaquery->the_post();
                                              ?>
                                     <a href="<?php esc_url( the_permalink()); ?>">
-                                        <span class="pull-left latest-thumb">
+                                        <span class="latest-thumb">
 
                                              <?php the_post_thumbnail( 'thumbnail' ); ?>
 

@@ -5,9 +5,9 @@
                 <div class="row">
                     <div class="col-md-8">
 
-                <p class="postmetadata">
-                    <span class="date">Posted on <?php the_time('F jS, Y') ?></span> in
-                    <span class="cat"><?php the_category(', ') ?></span>
+                <p>
+                    <span>Posted on <?php the_time('F jS, Y') ?></span> in
+                    <span><?php the_category(', ') ?></span>
                 </p>
 
                         <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -23,8 +23,8 @@
                         <?php endif; ?>
                     
                     <?php if ( get_post_type() == 'ai1ec_event' ) {}else{
-echo '<div class="single-back-link"> <a href="' . esc_url( get_permalink( get_page_by_title( 'news' ))) . '"><< Back to News </a></div>';
-}?>
+                    echo '<div class="single-back-link"> <a href="' . esc_url( get_permalink( get_page_by_title( 'news' ))) . '"><< Back to News </a></div>';
+                    }?>
                 </div> <!-- /row -->
             </div> <!-- /container -->
 

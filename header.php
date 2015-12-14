@@ -23,7 +23,7 @@
                 <div class="container">
                     <div class="row">
                         
-                        <div class="logo-desktop col-sm-9"><!-- logo -->
+                        <div class="logo-desktop"><!-- logo -->
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                 <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo-bw.png" alt="logo" id="logo"/>
                             </a>
@@ -31,7 +31,7 @@
 
                         </div><!-- /#logo -->
                         <!--start login-enroll-desktop-->
-                        <div class="col-sm-3 login-enroll-desktop">
+                        <div class="login-enroll-desktop">
                             <div class="header-buttons">
                                 <a href="<?php echo get_page_link( get_page_by_title( 'enroll' )->ID ); ?>">
                                     <button type="button" class="btn btn-info btn-block">Enroll</button>
@@ -47,16 +47,16 @@
 
                 
                 <div class="navbar navbar-default navbar-static-top" role="navigation">
-                        <div class="logo-mobile col-sm-9 hidden-sm hidden-md hidden-lg"><!-- logo -->
+                        <div class="logo-mobile"><!-- logo -->
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                 <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo-bw.png" alt="logo" id="logo"/>
                             </a>
-                            <a class="navbar-brand navbar-brand-mobile hidden-sm hidden-md hidden-lg" href="<?php echo esc_url( home_url() ); ?>">West Side Music Academy</a>
+                            <a class="navbar-brand navbar-brand-mobile" href="<?php echo esc_url( home_url() ); ?>">West Side Music Academy</a>
 
                         </div><!-- /#logo -->
                     <div class="container">
 
-                        <div class="navbar-header col-xs-3 pull-right">
+                        <div class="navbar-header">
                             <a data-toggle="collapse" href=".main-menu-select" aria-expanded="true" aria-controls="collapseOne">
                                 <button type="button" class="navbar-toggle collapsed">
                                 <span class="sr-only">Toggle navigation</span>
@@ -89,8 +89,8 @@
                             </ul>
                         </div><!--/.nav-collapse -->
                         <!--start mobile search-->
-                        <div class="collapse navbar-collapse hidden-lg search" id="search">
-                            <form class="mobile_search hidden-sm hidden-md hidden-lg" action="<?php bloginfo('siteurl'); ?>/" role="search" method="GET">
+                        <div class="collapse navbar-collapse search" id="search">
+                            <form class="mobile_search" action="<?php bloginfo('siteurl'); ?>/" role="search" method="GET">
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="s" name="s" placeholder="Search" <?php if ( $search_terms !== '' ) { echo ' value="' . $search_terms . '"'; } ?> />
                                     <span class="input-group-btn">
@@ -105,7 +105,7 @@
                 <!-- start login-enroll-mobile -->
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-3 login-enroll-mobile hidden-sm hidden-md hidden-lg">
+                        <div class="login-enroll-mobile ">
                             <div class="header-buttons">
                                 <a href="<?php echo get_page_link( get_page_by_title( 'enroll' )->ID ); ?>">
                                     <button type="button" class="btn-xl">Enroll</button>
