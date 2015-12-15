@@ -99,6 +99,7 @@ img.attachment-full {
 .home-banner-img {
     width: 100%;
     height: auto;
+
 }
 
 .entry {
@@ -146,8 +147,8 @@ blockquote {
     .make-xs-column(12);
     padding: 0;
     
-    .slides img {
-        border-radius: @border-radius-base;
+    @media(min-width:48em){//768px
+    padding-top: 10px;
     }
 }
 
@@ -159,17 +160,17 @@ blockquote {
     padding: 15px;
     width: 100%;
     color: #000;
-    font-size:@font-size-h5;
+/*    font-size:@font-size-h5;*/
     z-index:999;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    
+    font-weight: bolder;
     a {
         color: #000;
 
     }
-    @media(min-width:28em){//450px
+    @media(min-width:34em){//550px
         position:absolute;
         margin:0;
         top: 5%;
@@ -200,24 +201,33 @@ blockquote {
         bottom: 10%;
         padding: 23px;
         width:40%;
-        font-size:20px;
+/*        font-size:20px;*/
+
         border-radius:60px;
         background:rgba(0,0,0,0.5);
     }
-
+    
+    @media(min-width:53em){//850px
+    font-size: 1.3em;
+    }
+    
+    @media(min-width:62.5em){//1000px
+    font-size: 1.6em;
+    }
+    
     @media(min-width:75em){//1200px
         top:15%;
         right:7%;
         bottom:15%;
         padding:30px;
         width:40%;
-        font-size:31px;
+/*        font-size:31px;*/
 
     }
 }
 
 .home-banner-caption-inner {
-    @media(min-width:28em){//450px    
+    @media(min-width:34em){//550px   
         position: relative;
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -261,33 +271,58 @@ blockquote {
 }
 
 .home-cta-row {
-    padding-top:20px;
-    @media(min-width:48em){//768px
+    
+    @media(min-width:62em){//992px
         .row-eq-height;
+        padding-top:20px;
+    }
+}
+
+.home-latest-row {
+    
+    clear:both;
+    
+    h3 {
+        padding-top: 30px;
+        
+        @media(min-width:40em){//650px                           
+            padding-top:0px; 
+        }
         
     }
+    
+    @media(min-width:40em){//650px
+                           
+    padding-top:0px;                
+    float:left;
+    clear:none;
+    width:33%;
+    
+    }
+    
+    @media(min-width:62em){//992px
+        .row;
+        .home-row;
+    
+    }
+    
 }
 
 .home-ctas {
     background: @brand-yellow;
-        padding: 20px 30px;
+    padding: 20px 30px;
     border-radius: @border-radius-base;
     margin:20px auto;
     font-size: 18px;
-    @media(min-width:48em){//768px
-         
-        width:100%; 
-        margin: 0 2%;
-        
-         a h3 {
-            font-family:sans-serif;
-            font-size: 24px;
-        }
-        
-    }    
+    overflow:hidden;
+    a h3 {
+        font-family:sans-serif;
+        font-size: 24px;
+    }
+   
     
     @media(min-width:62em){//992px
-        
+        margin: 0 2%;
         width:33%;
 
     } 
@@ -303,10 +338,13 @@ blockquote {
 }
 
 .home-about-row {
-    margin-top: 20px;
+    
     @media(min-width:48em){//768px
-        .row-eq-height;
-        
+        .row-eq-height;        
+    }
+    
+    @media(min-width:62em){//992px
+        margin-top: 20px;
     }
 }
 
@@ -334,12 +372,19 @@ blockquote {
     .make-xs-column(12);
     float:none;
     clear:both;
+    margin-top: 20px;
+    
     iframe {
         width: 100%;
         height:300px;    
         border-radius: @border-radius-base; 
 
     }
+
+    @media(min-width:48em){//768px
+        margin-top:0px;
+        
+    }    
     
     @media(min-width:62em){//992px
         .make-sm-column(6);
@@ -486,7 +531,7 @@ blockquote {
     @media(min-width:48em){//768px
         
         img {
-            width: 50px;
+            width: 75px;
             height: auto;
             margin-bottom:10px;
         }
@@ -495,8 +540,7 @@ blockquote {
     @media(min-width:75em){//1200px
         
         img {
-            width: 75px;
-            height: auto;
+            
             margin-bottom: 20px;
         }
     }
@@ -537,6 +581,10 @@ blockquote {
     clear: both;
     .hidden-lg;
     
+}
+
+#searchform {
+    .hidden-xs;
 }
 
 .search-page-form {
@@ -594,10 +642,12 @@ blockquote {
     
 }
 
-.mobile_search {
+.mobile-search {
     .hidden-sm;
     .hidden-md;
     .hidden-lg;
+    margin-bottom: 10px;
+    margin-right: 15px;
 }
 
 .logo-mobile {
@@ -639,6 +689,7 @@ blockquote {
     display:none;
     margin-top:5px;
     padding-bottom:5px;
+    margin-bottom: 10px;
     
     @media(min-width:48em){//768px
 
@@ -970,6 +1021,8 @@ p.footer-link {
 
 .contact-info {
     text-align: right;
+    clear: right;
+    margin-right: 20px;
 }
 
 .wpcf7 {

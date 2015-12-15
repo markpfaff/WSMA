@@ -5,10 +5,10 @@
         <!--subnav-->
         <?php
         if (is_search()) {
-            //show nothing
+            //show title of search
             echo '<h2>Search</h2>' ;
         }else if (is_home()) {
-            //show nothing
+            //show title of news
             echo '<h2>News</h2>' ;
         }else{
             
@@ -44,4 +44,4 @@
 
 	</div>
 
-</div> <!-- /class col-md-2 -->
+</div> <!-- /sidebar container -->

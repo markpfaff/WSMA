@@ -7,14 +7,14 @@ Template Name: Individual Class Page
 
 
 <!-- content start -->
-<div id="container" class="page">
+<div class="container">
     <div class="row">
 
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
-        <h1 class="col-md-8"><?php the_title(); ?></h1>
+        <h1 class="col-sm-8"><?php the_title(); ?></h1>
 
-        <article class="page page-intro-p" id="post-<?php the_ID(); ?>">
+        <article class="page-intro-p" id="post-<?php the_ID(); ?>">
             <div class="entry">
             <?php the_content('<p class="serif">More &raquo;</p>'); ?>
         	</div>
@@ -35,7 +35,7 @@ Template Name: Individual Class Page
 </div><!--/container-->   
         
         <?php endwhile; else:?>
-        <article class="classes-teacher-container not-found">
+        <article class="classes-teacher-container">
             <div class="entry">
                 <p class="lead"><?php _e('Sorry, this page does not exist. Try searching for one.'); ?></p>
                 <?php get_search_form(); ?>

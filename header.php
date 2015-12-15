@@ -6,7 +6,7 @@
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
-        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>
 
@@ -41,19 +41,19 @@
                                 </a>
                             </div><!-- /.header-buttons -->
                             <?php get_search_form() ;?> 
-                        </div><!--/ .login-enroll-lg-->
+                        </div><!--/ .login-enroll-desktop-->
                     </div><!-- /.row -->
                 </div><!-- /.container -->
 
                 
                 <div class="navbar navbar-default navbar-static-top" role="navigation">
-                        <div class="logo-mobile"><!-- logo -->
+                        <div class="logo-mobile">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                 <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo-bw.png" alt="logo" id="logo"/>
                             </a>
                             <a class="navbar-brand navbar-brand-mobile" href="<?php echo esc_url( home_url() ); ?>">West Side Music Academy</a>
 
-                        </div><!-- /#logo -->
+                        </div><!-- /logo-mobile -->
                     <div class="container">
 
                         <div class="navbar-header">
@@ -90,7 +90,7 @@
                         </div><!--/.nav-collapse -->
                         <!--start mobile search-->
                         <div class="collapse navbar-collapse search" id="search">
-                            <form class="mobile_search" action="<?php bloginfo('siteurl'); ?>/" role="search" method="GET">
+                            <form class="mobile-search" action="<?php bloginfo('siteurl'); ?>/" role="search" method="GET">
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="s" name="s" placeholder="Search" <?php if ( $search_terms !== '' ) { echo ' value="' . $search_terms . '"'; } ?> />
                                     <span class="input-group-btn">
@@ -98,7 +98,7 @@
                                     </span>
                                 </div>
                             </form>
-                        </div><!--/ mobile search-->
+                        </div><!--/#search-->
                         
                     </div>  <!--/.container --> 
                 </div><!--/.navbar-default -->

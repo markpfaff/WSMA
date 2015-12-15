@@ -11,7 +11,7 @@ Template Name: Classes Main Page
 
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
-        <h1 class="col-md-9 page-title"><?php the_title(); ?></h1>
+        <h1 class="col-sm-9"><?php the_title(); ?></h1>
         <article class="page page-intro-p" id="post-<?php the_ID(); ?>">
             <div class="entry">
             <?php the_content('<p class="serif">More &raquo;</p>'); ?>
@@ -19,7 +19,7 @@ Template Name: Classes Main Page
         </article>
         <?php endwhile; else:?>
         
-        <article class="page col-md-9 not-found">
+        <article class="col-sm-9">
             <div class="entry">
                 <p class="lead"><?php _e('Sorry, this page does not exist. Try searching for one.'); ?></p>
                 <?php get_search_form(); ?>

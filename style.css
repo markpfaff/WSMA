@@ -6938,8 +6938,10 @@ blockquote {
   padding-right: 15px;
   padding: 0;
 }
-.home-banner .slides img {
-  border-radius: 4px;
+@media (min-width: 48em) {
+  .home-banner {
+    padding-top: 10px;
+  }
 }
 .home-banner-caption {
   background: #ffc629;
@@ -6949,16 +6951,17 @@ blockquote {
   padding: 15px;
   width: 100%;
   color: #000;
-  font-size: 14px;
+  /*    font-size:@font-size-h5;*/
   z-index: 999;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  font-weight: bolder;
 }
 .home-banner-caption a {
   color: #000;
 }
-@media (min-width: 28em) {
+@media (min-width: 34em) {
   .home-banner-caption {
     position: absolute;
     margin: 0;
@@ -6986,9 +6989,19 @@ blockquote {
     bottom: 10%;
     padding: 23px;
     width: 40%;
-    font-size: 20px;
+    /*        font-size:20px;*/
     border-radius: 60px;
     background: rgba(0, 0, 0, 0.5);
+  }
+}
+@media (min-width: 53em) {
+  .home-banner-caption {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 62.5em) {
+  .home-banner-caption {
+    font-size: 1.6em;
   }
 }
 @media (min-width: 75em) {
@@ -6998,10 +7011,10 @@ blockquote {
     bottom: 15%;
     padding: 30px;
     width: 40%;
-    font-size: 31px;
+    /*        font-size:31px;*/
   }
 }
-@media (min-width: 28em) {
+@media (min-width: 34em) {
   .home-banner-caption-inner {
     position: relative;
     top: 50%;
@@ -7046,15 +7059,42 @@ blockquote {
   clear: both;
   overflow: hidden;
 }
-.home-cta-row {
-  padding-top: 20px;
-}
-@media (min-width: 48em) {
+@media (min-width: 62em) {
   .home-cta-row {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    padding-top: 20px;
+  }
+}
+.home-latest-row {
+  clear: both;
+}
+.home-latest-row h3 {
+  padding-top: 30px;
+}
+@media (min-width: 40em) {
+  .home-latest-row h3 {
+    padding-top: 0px;
+  }
+}
+@media (min-width: 40em) {
+  .home-latest-row {
+    padding-top: 0px;
+    float: left;
+    clear: none;
+    width: 33%;
+  }
+}
+@media (min-width: 62em) {
+  .home-latest-row {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    overflow: hidden;
   }
 }
 .home-ctas {
@@ -7063,19 +7103,15 @@ blockquote {
   border-radius: 4px;
   margin: 20px auto;
   font-size: 18px;
+  overflow: hidden;
 }
-@media (min-width: 48em) {
-  .home-ctas {
-    width: 100%;
-    margin: 0 2%;
-  }
-  .home-ctas a h3 {
-    font-family: sans-serif;
-    font-size: 24px;
-  }
+.home-ctas a h3 {
+  font-family: sans-serif;
+  font-size: 24px;
 }
 @media (min-width: 62em) {
   .home-ctas {
+    margin: 0 2%;
     width: 33%;
   }
 }
@@ -7084,15 +7120,17 @@ blockquote {
     font-size: 28px;
   }
 }
-.home-about-row {
-  margin-top: 20px;
-}
 @media (min-width: 48em) {
   .home-about-row {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+@media (min-width: 62em) {
+  .home-about-row {
+    margin-top: 20px;
   }
 }
 .home-about {
@@ -7136,11 +7174,17 @@ blockquote {
   padding-right: 15px;
   float: none;
   clear: both;
+  margin-top: 20px;
 }
 .home-youtube iframe {
   width: 100%;
   height: 300px;
   border-radius: 4px;
+}
+@media (min-width: 48em) {
+  .home-youtube {
+    margin-top: 0px;
+  }
 }
 @media (min-width: 62em) {
   .home-youtube {
@@ -7282,15 +7326,13 @@ blockquote {
 }
 @media (min-width: 48em) {
   .latest-thumb img {
-    width: 50px;
+    width: 75px;
     height: auto;
     margin-bottom: 10px;
   }
 }
 @media (min-width: 75em) {
   .latest-thumb img {
-    width: 75px;
-    height: auto;
     margin-bottom: 20px;
   }
 }
@@ -7333,6 +7375,11 @@ blockquote {
 }
 @media (min-width: 1200px) {
   #search {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  #searchform {
     display: none !important;
   }
 }
@@ -7390,18 +7437,22 @@ blockquote {
 .mobile-toggle {
   padding: 4.5px 14px;
 }
+.mobile-search {
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
 @media (min-width: 768px) and (max-width: 991px) {
-  .mobile_search {
+  .mobile-search {
     display: none !important;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .mobile_search {
+  .mobile-search {
     display: none !important;
   }
 }
 @media (min-width: 1200px) {
-  .mobile_search {
+  .mobile-search {
     display: none !important;
   }
 }
@@ -7462,6 +7513,7 @@ blockquote {
   display: none;
   margin-top: 5px;
   padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 @media (min-width: 768px) {
   .logo-desktop {
@@ -7867,6 +7919,8 @@ p.footer-link {
 }
 .contact-info {
   text-align: right;
+  clear: right;
+  margin-right: 20px;
 }
 .wpcf7 {
   float: left;

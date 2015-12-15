@@ -3,7 +3,7 @@
 
 
 <!-- content start -->
-<div id="container" class="page">
+<div class="container">
     <div class="row">
         
         <div class="content-404">

@@ -1,4 +1,4 @@
-            </div><!-- /class container -->
+            </div><!-- /class all-main-containers container -->
 
 
 
@@ -23,7 +23,7 @@
 
             </footer>
 
-        <script src="//localhost:35729/livereload.js"></script>
+<!--        <script src="//localhost:35729/livereload.js"></script>-->
 
         <?php wp_footer(); ?>
     </body>

@@ -68,7 +68,7 @@
                         </div>
                         <div class="home-ctas">
                                 <h2>Latest Media</h2>
-                                <div class="row home-row">
+                                <div class="home-latest-row">
                                                 <?php 
                                                      $mediaquery = new WP_Query(array( 'name' => 'photos', 'post_type' => 'page' ));
 
@@ -85,10 +85,10 @@
                                                  ?>  
 
                                         </span>
-                                        <h3 class="pull-left">Latest Photos</h3>  
+                                        <h3>Latest Photos</h3>  
                                     </a>
                                 </div><!--/row-->
-                                <div class="row home-row">
+                                <div class="home-latest-row">
                                             <?php 
                                                  $mediaquery = new WP_Query(array( 'name' => 'video', 'post_type' => 'page' ));
 
@@ -104,10 +104,10 @@
                                                  wp_reset_postdata();
                                              ?>                                      
                                         </span>
-                                        <h3 class="pull-left">Latest Video</h3> 
+                                        <h3>Latest Video</h3> 
                                     </a>
                                 </div><!--/row-->
-                                <div class="row home-row">
+                                <div class="home-latest-row">
                                             <?php 
                                                  $mediaquery = new WP_Query(array( 'name' => 'audio', 'post_type' => 'page' ));
 
@@ -123,7 +123,7 @@
                                                  wp_reset_postdata();
                                              ?>       
                                         </span>
-                                        <h3 class="pull-left">Latest Audio</h3>   
+                                        <h3>Latest Audio</h3>   
                                     </a>  
                                 </div><!--/row-->
                         </div>
